@@ -1,0 +1,56 @@
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Cantata+One|Cormorant+Garamond|Crete+Round|Fredericka+the+Great|Fredoka+One|Hammersmith+One|IM+Fell+Double+Pica|Poiret+One|Prata|Roboto+Slab|Sanchez|Sorts+Mill+Goudy|Vast+Shadow');
+// font-family: 'Cormorant Garamond', serif;
+// font-family: 'Crete Round', serif;
+// font-family: 'Poiret One', cursive;
+// font-family: 'Fredoka One', cursive;
+// font-family: 'Sanchez', serif;
+// font-family: 'Hammersmith One', sans-serif;
+// font-family: 'Sorts Mill Goudy', serif;
+// font-family: 'Prata', serif;
+// font-family: 'Cantata One', serif;
+// font-family: 'Fredericka the Great', cursive;
+// font-family: 'IM Fell Double Pica', serif;
+// font-family: 'Vast Shadow', cursive;
+
+body {
+  font-family: 'Roboto Slab', serif;
+
+}
+
+h1 {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  
+}
+h2 {
+  text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
