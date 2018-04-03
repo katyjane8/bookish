@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get 'auth/failure', to: redirect('/')
   get 'logout', to: 'sessions#destroy'
 
-  get 'dashboard', to: 'dashboard#show'
+  get 'dashboard', to: 'dashboard#index'
 end

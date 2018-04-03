@@ -15,20 +15,16 @@
 
 body {
   font-family: 'Roboto Slab', serif;
-
 }
-
 h1 {
   text-align: center;
 }
 a {
   text-decoration: none;
-  
 }
 h2 {
   text-align: center;
 }
-
 ul {
     list-style-type: none;
     margin: 0;
@@ -36,11 +32,9 @@ ul {
     overflow: hidden;
     background-color: #333;
 }
-
 li {
     float: right;
 }
-
 li a {
     display: block;
     color: white;
@@ -49,8 +43,6 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
 }
-
-/* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: #111;
+    background-color: grey;
 }
