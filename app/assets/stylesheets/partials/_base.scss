@@ -25,12 +25,20 @@ a {
 h2 {
   text-align: center;
 }
-ul {
+ul nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+}
+.nav {
+  background-color: #333;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 li {
     float: right;
