@@ -1,3 +1,4 @@
+<% if current_user %>
 <ul>
   <img src="https://cdn.dribbble.com/users/68544/screenshots/2129380/book.png"
   width="120"
@@ -8,9 +9,18 @@
   <li><a href="contact.asp">Contact</a></li>
   <li><a href="about.asp">About</a></li>
 </ul>
-<% if current_user %>
+<div class="col col-6 px2">
   <h3>Welcome, <%= "#{current_user.first_name} #{current_user.last_name}" %></h3>
+  <% s = Faraday.get(URI.parse("https://www.goodreads.com/review/list/2518130.xml?key=#{ENV["GOODREADS_CLIENT_ID"]}&v=2")).body.force_encoding 'UTF-8' %>
+  <% response = Hash.from_xml(s) %>
+  <%= response["GoodreadsResponse"]["reviews"]["review"].first["book"] %> <br>
   <%= link_to "Logout", logout_path %>
-<% else %>
-  <%= link_to "Sign in with Google", "/auth/google_oauth2" %>
-<% end %>
+  <% else %>
+    <%= link_to "Sign in with Google", "/auth/google_oauth2" %>
+  <% end %>
+</div>
+<div class="col col-6 px2">
+  <h1>NYT BESTSELLERS</h1>
+  <% response = Faraday.get("http://api.nytimes.com/svc/books/v2/lists.json?api-key=#{ENV["NYT_KEY"]}&list=hardcover-fiction&weeks-on-list=2") %>
+  <%= JSON.parse(response.body, symbolize_headers: true) %>
+</div>
