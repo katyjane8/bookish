@@ -15,10 +15,13 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'pry'
 gem 'basscss-rails'
-gem 'omniauth-google-oauth2', '~> 0.2.1'
+gem 'omniauth'
+gem 'multi_xml'
+gem 'omniauth-oauth'
 gem 'figaro'
 gem 'faraday'
 gem 'json'
+gem 'oauth'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

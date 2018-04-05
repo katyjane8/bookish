@@ -1,4 +1,8 @@
 // fonts
+@font-face {
+   font-family: 'myFont';
+   src: url("fonts/OE_normal.ttf") format("truetype");
+}
 @import url('https://fonts.googleapis.com/css?family=Cantata+One|Cormorant+Garamond|Crete+Round|Fredericka+the+Great|Fredoka+One|Hammersmith+One|IM+Fell+Double+Pica|Poiret+One|Prata|Roboto+Slab|Sanchez|Sorts+Mill+Goudy|Vast+Shadow');
 // font-family: 'Cormorant Garamond', serif;
 // font-family: 'Crete Round', serif;
@@ -12,6 +16,7 @@
 // font-family: 'Fredericka the Great', cursive;
 // font-family: 'IM Fell Double Pica', serif;
 // font-family: 'Vast Shadow', cursive;
+$font-main: 'OE_normal', sans-serif;
 
 body {
   font-family: 'Roboto Slab', serif;
@@ -23,6 +28,7 @@ a {
   text-decoration: none;
 }
 h2 {
+  font-family: $font-main;
   text-align: center;
 }
 ul nav {

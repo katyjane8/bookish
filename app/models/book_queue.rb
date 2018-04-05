@@ -1,8 +1,7 @@
-class Goodreads
+class BookQueue
   attr_reader :isbn, :title, :image_url, :small_image_url, :link,
               :num_pages, :format, :publisher, :publication_year,
               :average_rating, :ratings_count, :description, :authors
-
   def initialize(attrs)
     @isbn = attrs["isbn"]
     @title = attrs["title"]
