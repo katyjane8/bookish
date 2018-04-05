@@ -8,6 +8,7 @@
   <li><a href="news.asp">News</a></li>
   <li><a href="contact.asp">Contact</a></li>
   <li><a href="about.asp">About</a></li>
+  <li><%= link_to "Logout", logout_path %></li>
 </ul>
 <div class="col col-6 px2">
   <h3>Welcome, <%= "#{current_user.first_name} #{current_user.last_name}" %></h3>
@@ -19,13 +20,12 @@
       <%= image_tag book.image_url %><br>
       <% end %>
     </ul>
-      <%= link_to "Logout", logout_path %>
-      <% else %>
-        <%= link_to "Sign in with Google", "/auth/google_oauth2" %>
-      <% end %>
 </div>
 <div class="col col-6 px2">
   <h2>NYT BESTSELLERS</h2>
   <% response = Faraday.get("http://api.nytimes.com/svc/books/v2/lists.json?api-key=#{ENV["NYT_KEY"]}&list=hardcover-fiction&weeks-on-list=2") %>
   <%= JSON.parse(response.body, symbolize_headers: true) %>
 </div>
+<% else %>
+<%= link_to "Sign in with Goodreads" %>
+<% end %>
