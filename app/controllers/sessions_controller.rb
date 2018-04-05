@@ -1,16 +1,24 @@
 class SessionsController < ApplicationController
   def new
+  # goodreads oauth1 token
+
     consumer = OAuth::Consumer.new(ENV["GOODREADS_CLIENT_ID"],
                                ENV["GOODREADS_SECRET"],
                                :site => 'https://www.goodreads.com')
     request_token = consumer.get_request_token
+
+    session["request_token"] = request_token
+    require "pry"; binding.pry
     redirect_to request_token.authorize_url
   end
 
-
   def create
+    #goodreads access token
     access_token = request_token.get_access_token
 
+    redirect_to dashboard_path
+
+    #oauth2 trial
   #   client_id     = ENV["GOODREADS_CLIENT_ID"]
   #   client_secret = ENV["GOODREADS_SECRET"]
   #   code          = params[:code]
@@ -36,10 +44,9 @@ class SessionsController < ApplicationController
   #
   # session[:user_id] = user.id
 
-  redirect_to dashboard_path
-  # user = User.update_or_create(request.env["omniauth.auth"])
-  #     session[:id] = user.id
-  #     redirect_to dashboard_path
+  user = User.update_or_create(request.env["omniauth.auth"])
+      session[:id] = user.id
+      redirect_to dashboard_path
   end
 
   def destroy
