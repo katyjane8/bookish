@@ -7,5 +7,5 @@ class DashboardController < ApplicationController
     @nyt_reviews = raw_data["results"].map do |result|
       Reviews.new(result)
     end
-  end
+  end 
 end
