@@ -22,6 +22,7 @@ gem 'figaro'
 gem 'faraday'
 gem 'json'
 gem 'oauth'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
