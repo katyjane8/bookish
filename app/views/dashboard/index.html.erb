@@ -1,50 +1,54 @@
-<ul class="nav">
-  <img src="https://cdn.dribbble.com/users/68544/screenshots/2129380/book.png"
-  width="120"
-  height="96"
-  class="mx auto" />
-  <li><a href="root#home">Home</a></li>
-  <li><a href="news.asp">News</a></li>
-  <li><a href="contact.asp">Contact</a></li>
-  <li><a href="about.asp">About</a></li>
-  <li><%= link_to "Logout", logout_path %></li>
-</ul>
-<div class="col col-6 px2">
-  <ul>
-    <h2>Your Goodreads Queue</h2>
-      <div class="wrapper">
-          <% @book_info.each do |book| %>
-          <div class="hover panel">
-              <div class="front">
-              <p><%= image_tag book.image_url %></p>
-          </div>
-            <div class="back">
-              <p><%= book.isbn %></p>
-              <p><%= book.title %></p>
+<% if current_user %>
+  <ul class="nav">
+    <img src="https://cdn.dribbble.com/users/68544/screenshots/2129380/book.png"
+    width="120"
+    height="96"
+    class="mx auto" />
+    <li><a href="root#home">Home</a></li>
+    <li><a href="news.asp">News</a></li>
+    <li><a href="contact.asp">Contact</a></li>
+    <li><a href="about.asp">About</a></li>
+    <li><%= link_to "Logout", logout_path %></li>
+  </ul>
+  <div class="col col-6 px2">
+    <ul>
+      <h2>Your Goodreads Queue</h2>
+        <div class="wrapper">
+            <% @book_info.each do |book| %>
+            <div class="hover panel">
+                <div class="front">
+                <p><%= image_tag book.image_url %></p>
             </div>
-          </div>
-          <% end %>
-      </div>
-    </ul>
-  </div>
+              <div class="back">
+                <p><%= book.isbn %></p>
+                <p><%= book.title %></p>
+              </div>
+            </div>
+            <% end %>
+        </div>
+      </ul>
+    </div>
 
-<div class="col col-6 px2">
-  <h2>Map to Denver Bookstores</h2>
-  <iframe width="700"
-    height="500" frameborder="0" style="border:0"
-    src= "<%= "https://www.google.com/maps/embed/v1/search?key=#{ENV["GOOGLE_MAP_KEY"]}&q=book+stores+in+Denver" %>" allowfullscreen>
-  </iframe>
-  <h2>Mass Market Paperback NYT Bestsellers</h2>
-   <br>
-  <% @nyt_reviews.each do |review| %>
-    Rank: <%= review.rank %><br>
-    Bestseller Date: <%= review.bestsellers_date %><br>
-    Published Date: <%= review.published_date %><br>
-    Weeks on the List: <%= review.weeks_on_list %><br>
-    ISBN: <%= review.isbns %><br>
-    Title: <%= review.title %><br>
-    Description: <%= review.description %><br>
-    Author: <%= review.author %><br>
-    <br>
-  <% end %>
-</div>
+  <div class="col col-6 px2">
+    <h2>Map to Denver Bookstores</h2>
+    <iframe width="700"
+      height="500" frameborder="0" style="border:0"
+      src= "<%= "https://www.google.com/maps/embed/v1/search?key=#{ENV["GOOGLE_MAP_KEY"]}&q=book+stores+in+Denver" %>" allowfullscreen>
+    </iframe>
+    <h2>Mass Market Paperback NYT Bestsellers</h2>
+     <br>
+    <% @nyt_reviews.each do |review| %>
+      Rank: <%= review.rank %><br>
+      Bestseller Date: <%= review.bestsellers_date %><br>
+      Published Date: <%= review.published_date %><br>
+      Weeks on the List: <%= review.weeks_on_list %><br>
+      ISBN: <%= review.isbns %><br>
+      Title: <%= review.title %><br>
+      Description: <%= review.description %><br>
+      Author: <%= review.author %><br>
+      <br>
+    <% end %>
+  </div>
+<% else %>
+ <%= "WORDS" %>
+<% end %>
