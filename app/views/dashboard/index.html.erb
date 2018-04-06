@@ -1,4 +1,3 @@
-<% if current_user %>
 <ul class="nav">
   <img src="https://cdn.dribbble.com/users/68544/screenshots/2129380/book.png"
   width="120"
@@ -11,21 +10,23 @@
   <li><%= link_to "Logout", logout_path %></li>
 </ul>
 <div class="col col-6 px2">
-  <h3>Welcome, <%= "#{current_user.first_name} #{current_user.last_name}" %></h3>
     <h2>Your Goodreads Queue: </h2>
     <% @book_info.each do |book| %>
-    <ul class="books">
-      Book ISBN: <%= book.isbn %> <br>
-      Title: <%= book.title %> <br>
-      <%= image_tag book.image_url %><br>
-      <% end %>
+      <%= book.isbn %>
+      <%= book.title %>
+      <%= image_tag book.image_url %>
+    <% end %>
     </ul>
 </div>
 <div class="col col-6 px2">
   <h2>NYT BESTSELLERS</h2>
-  <% response = Faraday.get("http://api.nytimes.com/svc/books/v2/lists.json?api-key=#{ENV["NYT_KEY"]}&list=hardcover-fiction&weeks-on-list=2") %>
-  <%= JSON.parse(response.body, symbolize_headers: true) %>
+  <% @nyt_reviews.each do |review| %>
+    <%= review.list_name %>
+    <%= review.bestsellers_date %>
+    <%= review.published_date %>
+    <%= review.rank %>
+    <%= review.weeks_on_list %>
+    <%= review.isbns %>
+    <%= review.book_details %>
+  <% end  %>
 </div>
-<% else %>
-<%= link_to "Sign in with Goodreads" %>
-<% end %>
