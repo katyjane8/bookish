@@ -1,5 +1,7 @@
 {
   "name": "bookish",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "flip": "github:nnattawat/flip"
+  }
 }

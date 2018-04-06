@@ -3,23 +3,35 @@
   width="120"
   height="96"
   class="mx auto" />
-  <li><a href="default.asp">Home</a></li>
+  <li><a href="root#home">Home</a></li>
   <li><a href="news.asp">News</a></li>
   <li><a href="contact.asp">Contact</a></li>
   <li><a href="about.asp">About</a></li>
   <li><%= link_to "Logout", logout_path %></li>
 </ul>
 <div class="col col-6 px2">
-    <h2>Your Goodreads Queue: </h2>
-    <% @book_info.each do |book| %>
-      <%= book.isbn %><br>
-      <%= book.title %><br>
-      <%= image_tag book.image_url %><br>
-    <% end %>
-    </ul>
-</div>
+<ul>
+  <h2>Your Goodreads Queue: </h2>
+    <div class="wrapper">
+        <div class="hover panel">
+          <div class="front">
+            <% @book_info.each do |book| %>
+            <p><%= image_tag book.image_url %></p>
+            <% end %>
+          </div>
+          <div class="back">
+            <% @book_info.each do |book| %>
+            <p><%= book.isbn %></p>
+            <p><%= book.title %></p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+</ul>
+
 <div class="col col-6 px2">
-  <h2>NYT BESTSELLERS</h2>
+  <h2>NYT Bestsellers:</h2>
   <% @nyt_reviews.each do |review| %>
     List Name: <%= review.list_name %><br>
     Bestseller Date: <%= review.bestsellers_date %><br>
@@ -29,4 +41,11 @@
     ISBN: <%= review.isbns %><br>
     Book Deets: <%= review.book_details %><br>
   <% end  %>
+
+  <h2>Map to Bookstores</h2>
+  <iframe width="700"
+    height="500" frameborder="0" style="border:0"
+    src= "<%= "https://www.google.com/maps/embed/v1/search?key=#{ENV["GOOGLE_MAP_KEY"]}&q=book+stores+in+Denver" %>" allowfullscreen>
+  </iframe>
+
 </div>
