@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.update_or_create(params["oauth_token"])
+    user = User.update_or_create(params)
       session[:id] = user.id
 
     redirect_to dashboard_path
