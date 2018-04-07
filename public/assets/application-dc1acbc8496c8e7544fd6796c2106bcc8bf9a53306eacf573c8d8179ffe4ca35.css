@@ -1,0 +1,1757 @@
+@import url("https://fonts.googleapis.com/css?family=Cantata+One|Cormorant+Garamond|Crete+Round|Fredericka+the+Great|Fredoka+One|Hammersmith+One|IM+Fell+Double+Pica|Poiret+One|Prata|Roboto+Slab|Sanchez|Sorts+Mill+Goudy|Vast+Shadow");
+@font-face {
+  font-family: 'myFont';
+  src: url("fonts/OE_normal.ttf") format("truetype");
+}
+/* line 21, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_base.scss */
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+/* line 24, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_base.scss */
+h1 {
+  text-align: center;
+}
+
+/* line 27, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_base.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 30, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_base.scss */
+h2 {
+  font-family: "OE_normal", sans-serif;
+  text-align: center;
+}
+
+/* line 34, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_base.scss */
+ul nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* line 40, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_base.scss */
+.nav {
+  background-color: #333;
+}
+
+/* line 43, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_base.scss */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* line 49, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_base.scss */
+li {
+  float: right;
+}
+
+/* line 52, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_base.scss */
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* line 60, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_base.scss */
+li a:hover {
+  background-color: grey;
+}
+/* line 1, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_fadein.scss */
+.fade-in {
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+/* The style below is just for the appearance of the example div */
+/* line 55, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_fadein.scss */
+.style {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  padding-top: calc(30vh - 30px);
+  background-color: #414143;
+}
+
+/* line 61, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_fadein.scss */
+.style h1 {
+  color: #fff;
+  font-size: 50px;
+}
+
+/* line 65, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_fadein.scss */
+.style p {
+  color: #fff;
+  font-size: 20px;
+}
+/*-=-=-=-=-=-=-=-=-=-=- */
+/* Flip Panel */
+/*-=-=-=-=-=-=-=-=-=-=- */
+/* line 6, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_flip.scss */
+.wrapper {
+  width: auto;
+  margin: 0 auto;
+  background-color: #bdd3de;
+  hoverflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 15, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_flip.scss */
+.panel {
+  margin: 10px;
+  height: 200px;
+  width: 90px;
+  position: relative;
+  flex-grow: 0;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+}
+
+/* line 25, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_flip.scss */
+.panel .front,
+.panel .back {
+  text-align: center;
+}
+
+/* line 30, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_flip.scss */
+.panel .front {
+  height: inherit;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  text-align: center;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+/* line 49, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_flip.scss */
+.panel .back {
+  height: inherit;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+/* line 66, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_flip.scss */
+.panel.flip .front {
+  z-index: 100;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+
+/* line 71, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_flip.scss */
+.panel.flip .back {
+  z-index: 100;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+@import url("https://fonts.googleapis.com/css?family=Cantata+One|Cormorant+Garamond|Crete+Round|Fredericka+the+Great|Fredoka+One|Hammersmith+One|IM+Fell+Double+Pica|Poiret+One|Prata|Roboto+Slab|Sanchez|Sorts+Mill+Goudy|Vast+Shadow");
+@font-face {
+  font-family: 'myFont';
+  src: url("fonts/OE_normal.ttf") format("truetype");
+}
+/* line 21, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_base.scss */
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+/* line 24, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_base.scss */
+h1 {
+  text-align: center;
+}
+
+/* line 27, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_base.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 30, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_base.scss */
+h2 {
+  font-family: "OE_normal", sans-serif;
+  text-align: center;
+}
+
+/* line 34, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_base.scss */
+ul nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* line 40, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_base.scss */
+.nav {
+  background-color: #333;
+}
+
+/* line 43, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_base.scss */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* line 49, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_base.scss */
+li {
+  float: right;
+}
+
+/* line 52, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_base.scss */
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* line 60, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_base.scss */
+li a:hover {
+  background-color: grey;
+}
+
+/* line 1, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_fadein.scss */
+.fade-in {
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+/* The style below is just for the appearance of the example div */
+/* line 55, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_fadein.scss */
+.style {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  padding-top: calc(30vh - 30px);
+  background-color: #414143;
+}
+
+/* line 61, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_fadein.scss */
+.style h1 {
+  color: #fff;
+  font-size: 50px;
+}
+
+/* line 65, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_fadein.scss */
+.style p {
+  color: #fff;
+  font-size: 20px;
+}
+
+/*-=-=-=-=-=-=-=-=-=-=- */
+/* Flip Panel */
+/*-=-=-=-=-=-=-=-=-=-=- */
+/* line 5, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_flip.scss */
+.wrapper {
+  width: auto;
+  margin: 0 auto;
+  background-color: #bdd3de;
+  hoverflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 14, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_flip.scss */
+.panel {
+  margin: 10px;
+  height: 200px;
+  width: 90px;
+  position: relative;
+  flex-grow: 0;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+}
+
+/* line 24, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_flip.scss */
+.panel .front,
+.panel .back {
+  text-align: center;
+}
+
+/* line 29, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_flip.scss */
+.panel .front {
+  height: inherit;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  text-align: center;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+/* line 48, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_flip.scss */
+.panel .back {
+  height: inherit;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+/* line 65, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_flip.scss */
+.panel.flip .front {
+  z-index: 100;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+
+/* line 70, /Users/kathrine/turing/3module/bookish/app/assets/stylesheets/partials/_flip.scss */
+.panel.flip .back {
+  z-index: 100;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+}
+
+/* Basscss Type Scale */
+/* line 16, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_type-scale.scss */
+.h1 {
+  font-size: 2rem;
+}
+
+/* line 18, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_type-scale.scss */
+.h2 {
+  font-size: 1.5rem;
+}
+
+/* line 20, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_type-scale.scss */
+.h3 {
+  font-size: 1.25rem;
+}
+
+/* line 22, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_type-scale.scss */
+.h4 {
+  font-size: 1rem;
+}
+
+/* line 24, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_type-scale.scss */
+.h5 {
+  font-size: 0.875rem;
+}
+
+/* line 26, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_type-scale.scss */
+.h6 {
+  font-size: 0.75rem;
+}
+
+/* Basscss Typography */
+/* line 17, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_typography.scss */
+.font-family-inherit {
+  font-family: inherit;
+}
+
+/* line 19, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_typography.scss */
+.font-size-inherit {
+  font-size: inherit;
+}
+
+/* line 21, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_typography.scss */
+.text-decoration-none {
+  text-decoration: none;
+}
+
+/* line 23, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_typography.scss */
+.bold {
+  font-weight: bold;
+}
+
+/* line 25, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_typography.scss */
+.regular {
+  font-weight: normal;
+}
+
+/* line 27, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_typography.scss */
+.italic {
+  font-style: italic;
+}
+
+/* line 29, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_typography.scss */
+.caps {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* line 31, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_typography.scss */
+.left-align {
+  text-align: left;
+}
+
+/* line 33, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_typography.scss */
+.center {
+  text-align: center;
+}
+
+/* line 35, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_typography.scss */
+.right-align {
+  text-align: right;
+}
+
+/* line 37, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_typography.scss */
+.justify {
+  text-align: justify;
+}
+
+/* line 39, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_typography.scss */
+.nowrap {
+  white-space: nowrap;
+}
+
+/* line 41, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_typography.scss */
+.break-word {
+  word-wrap: break-word;
+}
+
+/* line 43, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_typography.scss */
+.line-height-1 {
+  line-height: 1;
+}
+
+/* line 45, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_typography.scss */
+.line-height-2 {
+  line-height: 1.125;
+}
+
+/* line 47, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_typography.scss */
+.line-height-3 {
+  line-height: 1.25;
+}
+
+/* line 49, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_typography.scss */
+.line-height-4 {
+  line-height: 1.5;
+}
+
+/* line 51, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_typography.scss */
+.list-style-none {
+  list-style: none;
+}
+
+/* line 53, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_typography.scss */
+.underline {
+  text-decoration: underline;
+}
+
+/* line 55, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_typography.scss */
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 62, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_typography.scss */
+.list-reset {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Basscss Layout */
+/* line 14, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_layout.scss */
+.inline {
+  display: inline;
+}
+
+/* line 16, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_layout.scss */
+.block {
+  display: block;
+}
+
+/* line 18, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_layout.scss */
+.inline-block {
+  display: inline-block;
+}
+
+/* line 20, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_layout.scss */
+.table {
+  display: table;
+}
+
+/* line 22, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_layout.scss */
+.table-cell {
+  display: table-cell;
+}
+
+/* line 24, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_layout.scss */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* line 26, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_layout.scss */
+.overflow-scroll {
+  overflow: scroll;
+}
+
+/* line 28, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_layout.scss */
+.overflow-auto {
+  overflow: auto;
+}
+
+/* line 30, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_layout.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 36, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_layout.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 38, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_layout.scss */
+.left {
+  float: left;
+}
+
+/* line 40, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_layout.scss */
+.right {
+  float: right;
+}
+
+/* line 42, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_layout.scss */
+.fit {
+  max-width: 100%;
+}
+
+/* line 44, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_layout.scss */
+.max-width-1 {
+  max-width: 24rem;
+}
+
+/* line 46, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_layout.scss */
+.max-width-2 {
+  max-width: 32rem;
+}
+
+/* line 48, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_layout.scss */
+.max-width-3 {
+  max-width: 48rem;
+}
+
+/* line 50, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_layout.scss */
+.max-width-4 {
+  max-width: 64rem;
+}
+
+/* line 52, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_layout.scss */
+.border-box {
+  box-sizing: border-box;
+}
+
+/* Basscss Align */
+/* line 10, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_align.scss */
+.align-baseline {
+  vertical-align: baseline;
+}
+
+/* line 12, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_align.scss */
+.align-top {
+  vertical-align: top;
+}
+
+/* line 14, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_align.scss */
+.align-middle {
+  vertical-align: middle;
+}
+
+/* line 16, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_align.scss */
+.align-bottom {
+  vertical-align: bottom;
+}
+
+/* Basscss Margin */
+/* line 14, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.m0 {
+  margin: 0;
+}
+
+/* line 16, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mt0 {
+  margin-top: 0;
+}
+
+/* line 18, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mr0 {
+  margin-right: 0;
+}
+
+/* line 20, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mb0 {
+  margin-bottom: 0;
+}
+
+/* line 22, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.ml0 {
+  margin-left: 0;
+}
+
+/* line 24, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mx0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 26, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.my0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* line 28, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.m1 {
+  margin: 0.5rem;
+}
+
+/* line 30, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mt1 {
+  margin-top: 0.5rem;
+}
+
+/* line 32, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mr1 {
+  margin-right: 0.5rem;
+}
+
+/* line 34, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mb1 {
+  margin-bottom: 0.5rem;
+}
+
+/* line 36, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.ml1 {
+  margin-left: 0.5rem;
+}
+
+/* line 38, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mx1 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+/* line 40, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.my1 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* line 42, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.m2 {
+  margin: 1rem;
+}
+
+/* line 44, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mt2 {
+  margin-top: 1rem;
+}
+
+/* line 46, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mr2 {
+  margin-right: 1rem;
+}
+
+/* line 48, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mb2 {
+  margin-bottom: 1rem;
+}
+
+/* line 50, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.ml2 {
+  margin-left: 1rem;
+}
+
+/* line 52, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mx2 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/* line 54, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.my2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* line 56, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.m3 {
+  margin: 2rem;
+}
+
+/* line 58, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mt3 {
+  margin-top: 2rem;
+}
+
+/* line 60, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mr3 {
+  margin-right: 2rem;
+}
+
+/* line 62, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mb3 {
+  margin-bottom: 2rem;
+}
+
+/* line 64, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.ml3 {
+  margin-left: 2rem;
+}
+
+/* line 66, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mx3 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+/* line 68, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.my3 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* line 70, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.m4 {
+  margin: 4rem;
+}
+
+/* line 72, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mt4 {
+  margin-top: 4rem;
+}
+
+/* line 74, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mr4 {
+  margin-right: 4rem;
+}
+
+/* line 76, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mb4 {
+  margin-bottom: 4rem;
+}
+
+/* line 78, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.ml4 {
+  margin-left: 4rem;
+}
+
+/* line 80, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mx4 {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+/* line 82, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.my4 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+/* line 84, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mxn1 {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+/* line 86, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mxn2 {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+/* line 88, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mxn3 {
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
+/* line 90, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mxn4 {
+  margin-left: -4rem;
+  margin-right: -4rem;
+}
+
+/* line 92, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.ml-auto {
+  margin-left: auto;
+}
+
+/* line 94, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mr-auto {
+  margin-right: auto;
+}
+
+/* line 96, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_margin.scss */
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Basscss Padding */
+/* line 14, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.p0 {
+  padding: 0;
+}
+
+/* line 16, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.pt0 {
+  padding-top: 0;
+}
+
+/* line 18, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.pr0 {
+  padding-right: 0;
+}
+
+/* line 20, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.pb0 {
+  padding-bottom: 0;
+}
+
+/* line 22, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.pl0 {
+  padding-left: 0;
+}
+
+/* line 24, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.px0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 26, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.py0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* line 28, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.p1 {
+  padding: 0.5rem;
+}
+
+/* line 30, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.pt1 {
+  padding-top: 0.5rem;
+}
+
+/* line 32, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.pr1 {
+  padding-right: 0.5rem;
+}
+
+/* line 34, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.pb1 {
+  padding-bottom: 0.5rem;
+}
+
+/* line 36, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.pl1 {
+  padding-left: 0.5rem;
+}
+
+/* line 38, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.py1 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* line 40, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.px1 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* line 42, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.p2 {
+  padding: 1rem;
+}
+
+/* line 44, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.pt2 {
+  padding-top: 1rem;
+}
+
+/* line 46, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.pr2 {
+  padding-right: 1rem;
+}
+
+/* line 48, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.pb2 {
+  padding-bottom: 1rem;
+}
+
+/* line 50, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.pl2 {
+  padding-left: 1rem;
+}
+
+/* line 52, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.py2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* line 54, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.px2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* line 56, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.p3 {
+  padding: 2rem;
+}
+
+/* line 58, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.pt3 {
+  padding-top: 2rem;
+}
+
+/* line 60, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.pr3 {
+  padding-right: 2rem;
+}
+
+/* line 62, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.pb3 {
+  padding-bottom: 2rem;
+}
+
+/* line 64, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.pl3 {
+  padding-left: 2rem;
+}
+
+/* line 66, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.py3 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* line 68, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.px3 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* line 70, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.p4 {
+  padding: 4rem;
+}
+
+/* line 72, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.pt4 {
+  padding-top: 4rem;
+}
+
+/* line 74, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.pr4 {
+  padding-right: 4rem;
+}
+
+/* line 76, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.pb4 {
+  padding-bottom: 4rem;
+}
+
+/* line 78, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.pl4 {
+  padding-left: 4rem;
+}
+
+/* line 80, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.py4 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* line 82, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_padding.scss */
+.px4 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+/* Basscss Grid */
+/* line 13, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+.col {
+  float: left;
+  box-sizing: border-box;
+}
+
+/* line 18, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+.col-right {
+  float: right;
+  box-sizing: border-box;
+}
+
+/* line 23, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+.col-1 {
+  width: 8.3333333333%;
+}
+
+/* line 27, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+.col-2 {
+  width: 16.6666666667%;
+}
+
+/* line 31, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+.col-3 {
+  width: 25%;
+}
+
+/* line 35, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+.col-4 {
+  width: 33.3333333333%;
+}
+
+/* line 39, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+.col-5 {
+  width: 41.6666666667%;
+}
+
+/* line 43, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+.col-6 {
+  width: 50%;
+}
+
+/* line 47, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+.col-7 {
+  width: 58.3333333333%;
+}
+
+/* line 51, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+.col-8 {
+  width: 66.6666666667%;
+}
+
+/* line 55, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+.col-9 {
+  width: 75%;
+}
+
+/* line 59, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+.col-10 {
+  width: 83.3333333333%;
+}
+
+/* line 63, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+.col-11 {
+  width: 91.6666666667%;
+}
+
+/* line 67, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+.col-12 {
+  width: 100%;
+}
+
+@media (min-width: 40em) {
+  /* line 73, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .sm-col {
+    float: left;
+    box-sizing: border-box;
+  }
+
+  /* line 78, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .sm-col-right {
+    float: right;
+    box-sizing: border-box;
+  }
+
+  /* line 83, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .sm-col-1 {
+    width: 8.3333333333%;
+  }
+
+  /* line 87, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .sm-col-2 {
+    width: 16.6666666667%;
+  }
+
+  /* line 91, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .sm-col-3 {
+    width: 25%;
+  }
+
+  /* line 95, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .sm-col-4 {
+    width: 33.3333333333%;
+  }
+
+  /* line 99, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .sm-col-5 {
+    width: 41.6666666667%;
+  }
+
+  /* line 103, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .sm-col-6 {
+    width: 50%;
+  }
+
+  /* line 107, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .sm-col-7 {
+    width: 58.3333333333%;
+  }
+
+  /* line 111, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .sm-col-8 {
+    width: 66.6666666667%;
+  }
+
+  /* line 115, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .sm-col-9 {
+    width: 75%;
+  }
+
+  /* line 119, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .sm-col-10 {
+    width: 83.3333333333%;
+  }
+
+  /* line 123, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .sm-col-11 {
+    width: 91.6666666667%;
+  }
+
+  /* line 127, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .sm-col-12 {
+    width: 100%;
+  }
+}
+@media (min-width: 52em) {
+  /* line 135, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .md-col {
+    float: left;
+    box-sizing: border-box;
+  }
+
+  /* line 140, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .md-col-right {
+    float: right;
+    box-sizing: border-box;
+  }
+
+  /* line 145, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .md-col-1 {
+    width: 8.3333333333%;
+  }
+
+  /* line 149, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .md-col-2 {
+    width: 16.6666666667%;
+  }
+
+  /* line 153, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .md-col-3 {
+    width: 25%;
+  }
+
+  /* line 157, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .md-col-4 {
+    width: 33.3333333333%;
+  }
+
+  /* line 161, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .md-col-5 {
+    width: 41.6666666667%;
+  }
+
+  /* line 165, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .md-col-6 {
+    width: 50%;
+  }
+
+  /* line 169, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .md-col-7 {
+    width: 58.3333333333%;
+  }
+
+  /* line 173, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .md-col-8 {
+    width: 66.6666666667%;
+  }
+
+  /* line 177, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .md-col-9 {
+    width: 75%;
+  }
+
+  /* line 181, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .md-col-10 {
+    width: 83.3333333333%;
+  }
+
+  /* line 185, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .md-col-11 {
+    width: 91.6666666667%;
+  }
+
+  /* line 189, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .md-col-12 {
+    width: 100%;
+  }
+}
+@media (min-width: 64em) {
+  /* line 197, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .lg-col {
+    float: left;
+    box-sizing: border-box;
+  }
+
+  /* line 202, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .lg-col-right {
+    float: right;
+    box-sizing: border-box;
+  }
+
+  /* line 207, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .lg-col-1 {
+    width: 8.3333333333%;
+  }
+
+  /* line 211, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .lg-col-2 {
+    width: 16.6666666667%;
+  }
+
+  /* line 215, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .lg-col-3 {
+    width: 25%;
+  }
+
+  /* line 219, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .lg-col-4 {
+    width: 33.3333333333%;
+  }
+
+  /* line 223, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .lg-col-5 {
+    width: 41.6666666667%;
+  }
+
+  /* line 227, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .lg-col-6 {
+    width: 50%;
+  }
+
+  /* line 231, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .lg-col-7 {
+    width: 58.3333333333%;
+  }
+
+  /* line 235, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .lg-col-8 {
+    width: 66.6666666667%;
+  }
+
+  /* line 239, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .lg-col-9 {
+    width: 75%;
+  }
+
+  /* line 243, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .lg-col-10 {
+    width: 83.3333333333%;
+  }
+
+  /* line 247, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .lg-col-11 {
+    width: 91.6666666667%;
+  }
+
+  /* line 251, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_grid.scss */
+  .lg-col-12 {
+    width: 100%;
+  }
+}
+/* line 12, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.flex {
+  display: flex;
+}
+
+@media (min-width: 40em) {
+  /* line 15, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+  .sm-flex {
+    display: flex;
+  }
+}
+@media (min-width: 52em) {
+  /* line 19, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+  .md-flex {
+    display: flex;
+  }
+}
+@media (min-width: 64em) {
+  /* line 23, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+  .lg-flex {
+    display: flex;
+  }
+}
+/* line 26, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.flex-column {
+  flex-direction: column;
+}
+
+/* line 28, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* line 30, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.items-start {
+  align-items: flex-start;
+}
+
+/* line 32, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.items-end {
+  align-items: flex-end;
+}
+
+/* line 34, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.items-center {
+  align-items: center;
+}
+
+/* line 36, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.items-baseline {
+  align-items: baseline;
+}
+
+/* line 38, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.items-stretch {
+  align-items: stretch;
+}
+
+/* line 40, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.self-start {
+  align-self: flex-start;
+}
+
+/* line 42, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.self-end {
+  align-self: flex-end;
+}
+
+/* line 44, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.self-center {
+  align-self: center;
+}
+
+/* line 46, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.self-baseline {
+  align-self: baseline;
+}
+
+/* line 48, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.self-stretch {
+  align-self: stretch;
+}
+
+/* line 50, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.justify-start {
+  justify-content: flex-start;
+}
+
+/* line 52, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.justify-end {
+  justify-content: flex-end;
+}
+
+/* line 54, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.justify-center {
+  justify-content: center;
+}
+
+/* line 56, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.justify-between {
+  justify-content: space-between;
+}
+
+/* line 58, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.justify-around {
+  justify-content: space-around;
+}
+
+/* line 60, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.content-start {
+  align-content: flex-start;
+}
+
+/* line 62, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.content-end {
+  align-content: flex-end;
+}
+
+/* line 64, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.content-center {
+  align-content: center;
+}
+
+/* line 66, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.content-between {
+  align-content: space-between;
+}
+
+/* line 68, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.content-around {
+  align-content: space-around;
+}
+
+/* line 70, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.content-stretch {
+  align-content: stretch;
+}
+
+/* 1. Fix for Chrome 44 bug. https://code.google.com/p/chromium/issues/detail?id=506893 */
+/* line 74, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.flex-auto {
+  flex: 1 1 auto;
+  min-width: 0;
+  /* 1 */
+  min-height: 0;
+  /* 1 */
+}
+
+/* line 80, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.flex-none {
+  flex: none;
+}
+
+/* line 82, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.order-0 {
+  order: 0;
+}
+
+/* line 84, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.order-1 {
+  order: 1;
+}
+
+/* line 86, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.order-2 {
+  order: 2;
+}
+
+/* line 88, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.order-3 {
+  order: 3;
+}
+
+/* line 90, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_flexbox.scss */
+.order-last {
+  order: 99999;
+}
+
+/* Basscss Position */
+/* line 14, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_position.scss */
+.relative {
+  position: relative;
+}
+
+/* line 16, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_position.scss */
+.absolute {
+  position: absolute;
+}
+
+/* line 18, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_position.scss */
+.fixed {
+  position: fixed;
+}
+
+/* line 20, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_position.scss */
+.top-0 {
+  top: 0;
+}
+
+/* line 22, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_position.scss */
+.right-0 {
+  right: 0;
+}
+
+/* line 24, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_position.scss */
+.bottom-0 {
+  bottom: 0;
+}
+
+/* line 26, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_position.scss */
+.left-0 {
+  left: 0;
+}
+
+/* line 28, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_position.scss */
+.z1 {
+  z-index: 1;
+}
+
+/* line 30, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_position.scss */
+.z2 {
+  z-index: 2;
+}
+
+/* line 32, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_position.scss */
+.z3 {
+  z-index: 3;
+}
+
+/* line 34, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_position.scss */
+.z4 {
+  z-index: 4;
+}
+
+/* Basscss Border */
+/* line 12, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_border.scss */
+.border {
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* line 17, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_border.scss */
+.border-top {
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+/* line 22, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_border.scss */
+.border-right {
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+/* line 27, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_border.scss */
+.border-bottom {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+/* line 32, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_border.scss */
+.border-left {
+  border-left-style: solid;
+  border-left-width: 1px;
+}
+
+/* line 37, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_border.scss */
+.border-none {
+  border: 0;
+}
+
+/* line 39, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_border.scss */
+.rounded {
+  border-radius: 3px;
+}
+
+/* line 41, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_border.scss */
+.circle {
+  border-radius: 50%;
+}
+
+/* line 43, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_border.scss */
+.rounded-top {
+  border-radius: 3px 3px 0 0;
+}
+
+/* line 45, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_border.scss */
+.rounded-right {
+  border-radius: 0 3px 3px 0;
+}
+
+/* line 47, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_border.scss */
+.rounded-bottom {
+  border-radius: 0 0 3px 3px;
+}
+
+/* line 49, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_border.scss */
+.rounded-left {
+  border-radius: 3px 0 0 3px;
+}
+
+/* line 51, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_border.scss */
+.not-rounded {
+  border-radius: 0;
+}
+
+/* Basscss Hide */
+/* line 14, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_hide.scss */
+.hide {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@media (max-width: 40em) {
+  /* line 23, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_hide.scss */
+  .xs-hide {
+    display: none !important;
+  }
+}
+@media (min-width: 40em) and (max-width: 52em) {
+  /* line 27, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_hide.scss */
+  .sm-hide {
+    display: none !important;
+  }
+}
+@media (min-width: 52em) and (max-width: 64em) {
+  /* line 31, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_hide.scss */
+  .md-hide {
+    display: none !important;
+  }
+}
+@media (min-width: 64em) {
+  /* line 35, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_hide.scss */
+  .lg-hide {
+    display: none !important;
+  }
+}
+/* line 38, /Users/kathrine/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/basscss-rails-4.1.0/app/assets/stylesheets/basscss/_hide.scss */
+.display-none {
+  display: none !important;
+}
