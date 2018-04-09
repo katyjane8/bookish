@@ -2,10 +2,11 @@
 /* Flip Panel */
 /*-=-=-=-=-=-=-=-=-=-=- */
 
+@import "partials/colors.scss";
 .wrapper {
   width: auto;
   margin: 0 auto;
-  background-color: #bdd3de;
+  background-color: $wrapper;
   hoverflow: hidden;
   display: flex;
   flex-wrap: wrap;
@@ -72,23 +73,3 @@
 	-webkit-transform: rotateX(0deg) rotateY(0deg);
 	-moz-transform: rotateX(0deg) rotateY(0deg);
 }
-// .box1{
-// 	background-color: #14bcc8;
-// 	width: 250px;
-// 	height: 150px;
-// 	margin: 0 auto;
-// 	padding: 20px;
-// 	border-radius: 10px;
-// 	-moz-border-radius: 10px;
-// 	-webkit-border-radius: 10px;
-// }
-// .box2{
-// 	background-color: #ff7e70;
-// 	width: 250px;
-// 	height: 150px;
-// 	margin: 0 auto;
-// 	padding: 20px;
-// 	border-radius: 10px;
-// 	-moz-border-radius: 10px;
-// 	-webkit-border-radius: 10px;
-// }
