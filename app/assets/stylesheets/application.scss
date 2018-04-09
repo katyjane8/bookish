@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
+ @import "partials/fonts.scss";
+ @import "partials/colors.scss";
  @import "partials/base.scss";
  @import "partials/fadein.scss";
  @import "partials/flip.scss";
