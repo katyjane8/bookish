@@ -10,17 +10,23 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
-//= require_tree .
 //= require jquery
 //= require jquery_ujs
+//= require_tree .
+
 $(document).ready(function(){
-  // set up hover panels
-  // although this can be done without JavaScript, we've attached these events
-  // because it causes the hover to be triggered when the element is tapped on a touch device
   $('.hover').hover(function(){
     $(this).addClass('flip');
   },function(){
     $(this).removeClass('flip');
   });
 });
+
+function hamburger() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
