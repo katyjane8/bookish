@@ -20,8 +20,8 @@
                 <p><%= image_tag book.image_url %></p>
             </div>
               <div class="back">
-                <p><%= book.isbn %></p>
                 <p><%= book.title %></p>
+                <p><%= link_to "book link", book.link %> </p>
               </div>
             </div>
             <% end %>

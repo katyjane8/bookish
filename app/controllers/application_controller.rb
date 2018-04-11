@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
+  before_action :current_user
   helper_method :current_user, :goodreads_token, :token_generator
 
   def current_user
@@ -26,8 +27,8 @@ class ApplicationController < ActionController::Base
     response = access_token.get('/review/list.xml').body.force_encoding 'UTF-8'
     raw_data = Hash.from_xml(response)
     @book_info = raw_data["GoodreadsResponse"]["books"]["book"].map do |result|
-      BookQueue.new(result)
+      Book.new(result)
     end
-    @book_info
+   @book_info
   end
 end

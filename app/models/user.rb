@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  # has_many :books
+
   def self.update_or_create(params)
     user = User.new || User.find_by(id: params[:id])
     user.attributes = {
