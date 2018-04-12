@@ -1,7 +1,7 @@
 require "spec_helper"
-require "./app/models/book_queue"
+require "./app/models/book"
 
-describe BookQueue do
+describe Book do
   let(:attrs) {
     {
       "isbn"=>"1501156209",
@@ -20,10 +20,10 @@ describe BookQueue do
     }
   }
 
-  subject { BookQueue.new(attrs) }
+  subject { Book.new(attrs) }
 
   it "exists" do
-    expect(subject).to be_a BookQueue
+    expect(subject).to be_a Book
     expect(subject.isbn).to eq ("1501156209")
     expect(subject.title).to eq ("The Lying Game")
     expect(subject.image_url).to eq ("https://images.gr-assets.com/books/1520163193m/36622726.jpg")
