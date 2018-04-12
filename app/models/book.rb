@@ -1,7 +1,7 @@
 class Book
   # belongs_to :user
 
-  attr_reader :isbn, :title, :image_url, :small_image_url, :link,
+  attr_reader :isbn, :title, :image_url, :small_image_url, :large_image_url, :link,
               :num_pages, :format, :publisher, :publication_year,
               :average_rating, :ratings_count, :description, :authors
   def initialize(attrs)
@@ -9,6 +9,7 @@ class Book
     @title = attrs["title"]
     @image_url = attrs["image_url"]
     @small_image_url = attrs["small_image_url"]
+    @large_image_url = attrs["large_image_url"]
     @link = attrs["link"]
     @num_pages = attrs["num_pages"]
     @format = attrs["format"]

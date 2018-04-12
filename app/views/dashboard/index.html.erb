@@ -17,7 +17,7 @@
             <% @book_info.each do |book| %>
             <div class="hover panel">
                 <div class="front">
-                <p><%= image_tag book.image_url %></p>
+                <%= image_tag book.image_url %>
             </div>
               <div class="back">
                 <p><%= book.title %></p>
