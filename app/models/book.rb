@@ -5,19 +5,19 @@ class Book
               :num_pages, :format, :publisher, :publication_year,
               :average_rating, :ratings_count, :description, :authors
   def initialize(attrs)
-    @isbn = attrs["isbn"]
-    @title = attrs["title"]
-    @image_url = attrs["image_url"]
-    @small_image_url = attrs["small_image_url"]
-    @large_image_url = attrs["large_image_url"]
-    @link = attrs["link"]
-    @num_pages = attrs["num_pages"]
-    @format = attrs["format"]
-    @publisher = attrs["publisher"]
-    @publication_year = attrs["publication_year"]
-    @average_rating = attrs["average_rating"]
-    @ratings_count = attrs["ratings_count"]
-    @description = attrs["description"]
-    @authors = attrs["authors"]
+    @isbn = attrs["book"]["isbn"]
+    @title = attrs["book"]["title"]
+    @image_url = attrs["book"]["image_url"]
+    @small_image_url = attrs["book"]["small_image_url"]
+    @large_image_url = attrs["book"]["large_image_url"]
+    @link = attrs["book"]["link"]
+    @num_pages = attrs["book"]["num_pages"]
+    @format = attrs["book"]["format"]
+    @publisher = attrs["book"]["publisher"]
+    @publication_year = attrs["book"]["publication_year"]
+    @average_rating = attrs["book"]["average_rating"]
+    @ratings_count = attrs["book"]["ratings_count"]
+    @description = attrs["book"]["description"]
+    @authors = attrs["book"]["authors"]
   end
 end
