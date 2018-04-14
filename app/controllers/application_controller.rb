@@ -20,15 +20,19 @@ class ApplicationController < ActionController::Base
     return request_token
   end
 
-  def token_generator
+  def get_user_info
     hash = { oauth_token: session["token"], oauth_token_secret: session["token_secret"]}
     request_token = OAuth::RequestToken.from_hash(consumer, hash)
     access_token = request_token.get_access_token
-    response = access_token.get('/review/list.xml').body.force_encoding 'UTF-8'
-    raw_data = Hash.from_xml(response)
-    @book_info = raw_data["GoodreadsResponse"]["books"]["book"].map do |result|
-      Book.new(result)
-    end
-   @book_info
+    user_data = access_token.get('/api/auth_user.xml').body.force_encoding 'UTF-8'
+    raw_user_data = Hash.from_xml(user_data)
+    update_info(raw_user_data["GoodreadsResponse"]["user"])
+  end
+
+  def update_info(info)
+    if current_user.uid == nil
+      current_user.update(uid: info["id"], name: info["name"])
+    else
+    end 
   end
 end
