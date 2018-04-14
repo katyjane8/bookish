@@ -1,11 +1,12 @@
 class User < ApplicationRecord
-  # has_many :books
 
-  def self.update_or_create(params)
-    user = User.new || User.find_by(id: params[:id])
+  def self.create_user(params)
+    user = User.find_by(id: params[:id]) || User.new
     user.attributes = {
-      id: params["id"],
-      oauth_token: params["oauth_token"]
+      id: params[:id],
+      uid: params[:uid],
+      name: params[:name],
+      oauth_token: params[:oauth_token]
     }
     user.save!
     user

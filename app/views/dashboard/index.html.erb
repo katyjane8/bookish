@@ -27,14 +27,23 @@
         </div>
       </ul>
     </div>
-
   <div class="col col-6 px2">
     <h2>Map to Denver Bookstores</h2>
-    <iframe width="700"
-      height="500" frameborder="0" style="border:0"
-      src= "<%= "https://www.google.com/maps/embed/v1/search?key=#{ENV["GOOGLE_MAP_KEY"]}&q=book+stores+in+Denver" %>" allowfullscreen>
-    </iframe>
-
+      <div id="map"></div>
+      <script>
+        var map, infoWindow;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 39.7334616, lng: -104.9824661},
+            zoom: 15
+          });
+          infoWindow = new google.maps.InfoWindow;
+        }
+          </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCm3EjJoIr_NmvZkHUFJj9X-LZqqijgL1E&callback=initMap">
+      </script>
+  </div>
 <% else %>
  <%= "WORDS" %>
 <% end %>
