@@ -20,9 +20,12 @@ gem 'omniauth-oauth'
 gem 'figaro'
 gem 'faraday'
 gem 'json'
-gem 'oauth'
+# gem 'oauth'
 gem 'jquery-rails'
 gem 'devise'
+gem 'google_places'
+gem 'geocoder'
+gem 'geokit-rails'
 
 group :development, :test do
   gem 'vcr'

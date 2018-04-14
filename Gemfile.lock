@@ -84,10 +84,19 @@ GEM
     ffi (1.9.23)
     figaro (1.1.1)
       thor (~> 0.14)
+    geocoder (1.4.7)
+    geokit (1.11.0)
+    geokit-rails (2.3.0)
+      geokit (~> 1.5)
+      rails (>= 3.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    google_places (1.1.0)
+      httparty (>= 0.13.1)
     hashdiff (0.3.7)
     hashie (3.5.7)
+    httparty (0.16.2)
+      multi_xml (>= 0.5.2)
     i18n (1.0.0)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
@@ -238,12 +247,14 @@ DEPENDENCIES
   factory_bot_rails
   faraday
   figaro
+  geocoder
+  geokit-rails
+  google_places
   jbuilder (~> 2.5)
   jquery-rails
   json
   listen (>= 3.0.5, < 3.2)
   multi_xml
-  oauth
   omniauth
   omniauth-oauth
   pg (>= 0.18, < 2.0)
