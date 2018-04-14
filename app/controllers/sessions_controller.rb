@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.update_or_create(params)
+    user = User.create_user(params)
       session[:id] = user.id
     redirect_to dashboard_path
   end
