@@ -20,4 +20,10 @@ class BookQueueService
     end
     @book_service
   end
+
+  def get_book_info
+    get_book_queue.map do |new_id|
+      new_id.isbn
+    end
+  end
 end
