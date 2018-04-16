@@ -25,7 +25,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'google_places'
 gem 'geocoder'
-gem 'geokit-rails'
+gem 'bullet'
 
 group :development, :test do
   gem 'vcr'
