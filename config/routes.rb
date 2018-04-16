@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/auth/goodreads/callback', to: 'sessions#create'
   get '/auth/failure', to: redirect('/')
   get '/bestsellers', to: 'bestsellers#index'
+  get '/book/:id', to: 'book#show', as: 'book'
   get '/logout', to: 'sessions#destroy'
   resources :bookstores
 
