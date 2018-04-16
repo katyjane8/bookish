@@ -1,0 +1,12 @@
+<div class="col col-6 px2">
+  <div class="form">
+    <div class="field-wrap">
+      <%= form_tag dashboard_path, :method => :get do %>
+        <p>
+          <%= text_field_tag :search, params[:search] %>
+          <%= submit_tag "Search Near", :name => nil %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/auth/failure', to: redirect('/')
   get '/bestsellers', to: 'bestsellers#index'
   get '/logout', to: 'sessions#destroy'
+  resources :bookstores
 
   get '/dashboard', to: 'dashboard#index'
 end
