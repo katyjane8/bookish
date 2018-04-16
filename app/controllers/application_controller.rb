@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  before_action :current_user
+  before_action :current_user, :loc_function
   helper_method :current_user, :goodreads_token, :token_generator
 
   def current_user
@@ -33,6 +33,15 @@ class ApplicationController < ActionController::Base
     if current_user.uid == nil
       current_user.update(uid: info["id"], name: info["name"])
     else
-    end 
+    end
+  end
+
+  def loc_function
+    if request.location
+      result = request.location
+      @loc = result.country
+    else
+      @loc = "Denver"
+    end
   end
 end

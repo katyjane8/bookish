@@ -1,4 +1,4 @@
 class BookstoresController < ApplicationController
-  def search
+  def index
   end
 end
