@@ -4,5 +4,4 @@ class BestsellersController < ApplicationController
     @paperbacks = list.paperback
     @hardcovers = list.hardcover
   end
-
 end
