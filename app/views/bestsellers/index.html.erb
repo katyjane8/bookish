@@ -1,8 +1,7 @@
 <div class="topnav" id="myTopnav">
   <ul class="nav">
     <%= image_tag(asset_path("LOGO_Bookish.png"), size: "360x84") %>
-    <a href="#">Contact</a>
-    <a href="#">About</a>
+    <a href="/favorites">Favorites</a>
     <a href="/dashboard">Home</a>
     <%= link_to "Logout", logout_path %>
     <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
@@ -10,31 +9,41 @@
 </div>
 <div class="col col-6 px2">
   <h2>Mass Market Paperback NYT Bestsellers</h2>
-   <br>
-  <% @nyt_reviews.each do |review| %>
-    Rank: <%= review.rank %><br>
-    Bestseller Date: <%= review.bestsellers_date %><br>
-    Published Date: <%= review.published_date %><br>
-    Weeks on the List: <%= review.weeks_on_list %><br>
-    ISBN: <%= review.isbns %><br>
-    Title: <%= review.title %><br>
-    Description: <%= review.description %><br>
-    Author: <%= review.author %><br>
-    <br>
+  <div class="row codepen-hovercards">
+      <% @paperbacks.each do |review| %>
+      <div class="hovercard">
+        Rank: <%= review.rank %><br>
+        Bestseller Date: <%= review.bestsellers_date %><br>
+        Published Date: <%= review.published_date %><br>
+        Weeks on the List: <%= review.weeks_on_list %><br>
+        ISBN: <%= review.isbns %><br>
+        Title: <%= review.title %><br>
+        Description: <%= review.description %><br>
+        Author: <%= review.author %><br>
+        <a href="/favorites" class="hovercard-overlay">
+          <span class="button _inverse">Add to Favorites</span>
+        </a>
+      </div>
   <% end %>
+</div>
 </div>
 <div class="col col-6 px2">
   <h2>Fiction Hardcover NYT Bestsellers</h2>
-   <br>
-  <% @nyt_hc_reviews.each do |review| %>
-    Rank: <%= review.rank %><br>
-    Bestseller Date: <%= review.bestsellers_date %><br>
-    Published Date: <%= review.published_date %><br>
-    Weeks on the List: <%= review.weeks_on_list %><br>
-    ISBN: <%= review.isbns %><br>
-    Title: <%= review.title %><br>
-    Description: <%= review.description %><br>
-    Author: <%= review.author %><br>
-    <br>
-  <% end %>
+  <div class="row codepen-hovercards">
+      <% @hardcovers.each do |review| %>
+      <div class="hovercard">
+        Rank: <%= review.rank %><br>
+        Bestseller Date: <%= review.bestsellers_date %><br>
+        Published Date: <%= review.published_date %><br>
+        Weeks on the List: <%= review.weeks_on_list %><br>
+        ISBN: <%= review.isbns %><br>
+        Title: <%= review.title %><br>
+        Description: <%= review.description %><br>
+        Author: <%= review.author %><br>
+        <a href="/favorites" class="hovercard-overlay">
+          <span class="button _inverse">Add to Favorites</span>
+        </a>
+      </div>
+    <% end %>
+  </div>
 </div>
