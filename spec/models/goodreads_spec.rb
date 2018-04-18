@@ -35,7 +35,5 @@ describe Book do
     expect(subject.publication_year).to eq ("2018")
     expect(subject.average_rating).to eq ("3.53")
     expect(subject.ratings_count).to eq ("33253")
-    expect(subject.description).to eq ("On a cool June morning, a woman is walking her dog")
-    expect(subject.authors).to eq ({"author"=>{"id"=>"9013543", "name"=>"Ruth Ware"}})
   end
 end

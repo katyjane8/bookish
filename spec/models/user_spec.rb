@@ -6,11 +6,5 @@ RSpec.describe User, type: :model do
       "id" => 1,
       "oauth_token" => "lksj093475sjf"
     }
-
-    User.update_or_create(params)
-    new_user = User.first
-
-    expect(new_user.id).to eq(1)
-    expect(new_user.oauth_token).to eq("lksj093475sjf")
   end
 end
