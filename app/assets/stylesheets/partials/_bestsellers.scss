@@ -51,6 +51,19 @@
   }
 }
 
+.p_tags {
+  text-align: left;
+  color: black;
+  p {
+    margin: 0;
+  }
+}
+
+._inverse {
+  text-decoration: none;
+  color: white;
+}
+
 body {
   margin: 20vh 0;
 }

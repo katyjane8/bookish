@@ -10,9 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require map
 //= require jquery
 //= require jquery_ujs
+//= require map
 //= require_tree .
 
 $(document).ready(function(){
@@ -22,6 +22,39 @@ $(document).ready(function(){
     $(this).removeClass('flip');
   });
 });
+
+$(document).ready(function(){
+  $('.hovercard').on('click', '.hovercard-overlay', function(){
+    var user_id = $(this).closest('.hovercard').attr('id')
+    var isbns = $(this).closest('.hovercard').find('p')[4].innerText
+    var title = $(this).closest('.hovercard').find('p')[5].innerText
+    var description = $(this).closest('.hovercard').find('p')[6].innerText
+    var author = $(this).closest('.hovercard').find('p')[7].innerText
+  addFavorite(user_id, isbns, title, description, author)
+  });
+});
+
+const addFavorite = (user_id, isbns, title, description, author) => {
+  const body = { favorite: {
+    user_id: user_id, isbns: isbns, title: title, description: description, author: author
+  } }
+  fetch(`/api/v1/favorites`,{
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify(body)
+  }).then(response => response.text())
+    .then(data =>  {
+
+    if(data){
+         redirect: window.location.replace(`/favorites`)
+    } else {
+        alert("Invalid");
+    }
+  })
+}
 
 function myFunction() {
     var x = document.getElementById("myTopnav");
