@@ -7,7 +7,13 @@ Rails.application.routes.draw do
   get '/bestsellers', to: 'bestsellers#index'
   get '/book/:id', to: 'book#show', as: 'book'
   get '/logout', to: 'sessions#destroy'
-  resources :bookstores
-
   get '/dashboard', to: 'dashboard#index'
+  resources :favorites
+    
+    namespace 'api' do
+      namespace 'v1' do
+        resources :favorites
+    end
+  end
+
 end

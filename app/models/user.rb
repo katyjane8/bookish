@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :favorites, dependent: :destroy
 
   def self.create_user(params)
     user = User.find_by(id: params[:id]) || User.new

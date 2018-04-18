@@ -1,0 +1,74 @@
+.hovercard {
+  height: 200px;
+  text-align: left;
+  padding: 1.5rem 20px;
+  background: grey;
+  > * {
+    color: #fff;
+  }
+  &,
+  &-overlay  {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(70, 70, 70, .85);
+    opacity: 0;
+    transition: opacity 250ms;
+  }
+  &:hover &-overlay {
+    opacity: 1;
+    text-decoration: none;
+  }
+  & + * {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 899px) {
+  .hovercard {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .hovercard {
+    height: auto;
+  }
+  .hovercard-overlay {
+    position: static;
+    height: auto;
+    background: transparent;
+    opacity: 1;
+  }
+}
+
+.p_tags {
+  text-align: left;
+  color: black;
+  p {
+    margin: 0;
+  }
+}
+
+._inverse {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  margin: 20vh 0;
+}
+
+.codepen-hovercards {
+  text-align: center;
+  width: 650px;
+}
