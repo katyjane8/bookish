@@ -16,7 +16,7 @@ class BookQueueService
     response = conn.get("https://www.goodreads.com/review/list/#{@real_id}.xml?key=#{ENV["GOODREADS_CLIENT_ID"]}&v=2").body.force_encoding 'UTF-8'
     raw_data = Hash.from_xml(response)
     @book_service = raw_data["GoodreadsResponse"]["reviews"]["review"].map do |result|
-      Book.new(result)
+      BookQueue.new(result)
     end
     @book_service
   end
