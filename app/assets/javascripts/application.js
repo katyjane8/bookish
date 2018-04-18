@@ -32,7 +32,7 @@ $(document).ready(function(){
   });
 });
 
-const bookShow = (title) => {
+ const bookShow = (title) => {
   const body = { book: {
     title: title
   } }
