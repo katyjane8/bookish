@@ -9,40 +9,44 @@
 </div>
 <div class="col col-6 px2">
   <h2>Mass Market Paperback NYT Bestsellers</h2>
-  <div class="row codepen-hovercards">
-      <% @paperbacks.each do |review| %>
-      <div class="hovercard">
-        Rank: <%= review.rank %><br>
-        Bestseller Date: <%= review.bestsellers_date %><br>
-        Published Date: <%= review.published_date %><br>
-        Weeks on the List: <%= review.weeks_on_list %><br>
-        ISBN: <%= review.isbns %><br>
-        Title: <%= review.title %><br>
-        Description: <%= review.description %><br>
-        Author: <%= review.author %><br>
-        <a href="/favorites" class="hovercard-overlay">
-          <span class="button _inverse">Add to Favorites</span>
-        </a>
+    <div class="row codepen-hovercards">
+        <% @paperbacks.each do |review| %>
+        <div class="hovercard" id=<%= current_user.id %> >
+          <div class="p_tags">
+          <p>Rank: <%= review.rank %></p>
+          <p>Bestseller Date: <%= review.bestsellers_date %></p>
+          <p>Published Date: <%= review.published_date %></p>
+          <p>Weeks on the List: <%= review.weeks_on_list %></p>
+          <p>ISBN: <%= review.isbns %></p>
+          <p>Title: <%= review.title %></p>
+          <p>Description: <%= review.description %></p>
+          <p>Author: <%= review.author %></p>
+          <a href="#" class="hovercard-overlay">
+            <span class="button _inverse">Add to Favorites</span>
+          </a>
+        </div>
       </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
 </div>
 <div class="col col-6 px2">
   <h2>Fiction Hardcover NYT Bestsellers</h2>
   <div class="row codepen-hovercards">
       <% @hardcovers.each do |review| %>
-      <div class="hovercard">
-        Rank: <%= review.rank %><br>
-        Bestseller Date: <%= review.bestsellers_date %><br>
-        Published Date: <%= review.published_date %><br>
-        Weeks on the List: <%= review.weeks_on_list %><br>
-        ISBN: <%= review.isbns %><br>
-        Title: <%= review.title %><br>
-        Description: <%= review.description %><br>
-        Author: <%= review.author %><br>
-        <a href="/favorites" class="hovercard-overlay">
-          <span class="button _inverse">Add to Favorites</span>
-        </a>
+        <div class="hovercard" id=<%= current_user.id %> >
+          <div class="p_tags">
+            <p>Rank: <%= review.rank %></p>
+            <p>Bestseller Date: <%= review.bestsellers_date %></p>
+            <p>Published Date: <%= review.published_date %></p>
+            <p>Weeks on the List: <%= review.weeks_on_list %></p>
+            <p>ISBN: <%= review.isbns %></p>
+            <p>Title: <%= review.title %></p>
+            <p>Description: <%= review.description %></p>
+            <p>Author: <%= review.author %></p>
+          <a href="#" class="hovercard-overlay">
+            <span class="button _inverse">Add to Favorites</span>
+          </a>
+        </div>
       </div>
     <% end %>
   </div>
