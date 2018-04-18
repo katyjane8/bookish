@@ -1,4 +1,4 @@
-class Reviews
+class Review < ApplicationRecord
   attr_reader :list_name, :bestsellers_date, :published_date, :rank, :weeks_on_list,
               :title, :description, :author, :isbns
   def initialize(attrs)
