@@ -6,9 +6,14 @@ Rails.application.routes.draw do
   get '/auth/failure', to: redirect('/')
   get '/bestsellers', to: 'bestsellers#index'
   get '/book/:id', to: 'book#show', as: 'book'
-  get '/favorites', to: 'favorites#index'
   get '/logout', to: 'sessions#destroy'
-  resources :bookstores
-
   get '/dashboard', to: 'dashboard#index'
+  resources :favorites
+    
+    namespace 'api' do
+      namespace 'v1' do
+        resources :favorites
+    end
+  end
+
 end
