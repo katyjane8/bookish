@@ -1,0 +1,17 @@
+@import "partials/colors.scss";
+
+.book_wrapper {
+  display: grid;
+  padding: 20px;
+  grid-template-columns: 550px 550px 550px;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+}
+.book_box {
+  background-color: $accent_blue;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}

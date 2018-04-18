@@ -1,0 +1,17 @@
+<div class="topnav" id="myTopnav">
+  <ul class="nav">
+    <%= image_tag(asset_path("LOGO_Bookish.png"), size: "360x84") %>
+    <a href="/favorites">Favorites</a>
+    <a href="/dashboard">Home</a>
+    <%= link_to "Logout", logout_path %>
+    <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </ul>
+</div>
+<div class="book_wrapper">
+  <div class="book_box">
+  <h2><%= @book_show.title %></h2><br>
+  <p><%= image_tag @book_show.image_url %></p>
+  <p><strong>Book Description: </strong><br /><%= @book_show.description %></p>
+  <p><strong>Book Author: </strong> <%= @book_show.authors %></p>
+  </div>
+</div>

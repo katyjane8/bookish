@@ -1,8 +1,10 @@
+@import "partials/colors.scss";
+
 .hovercard {
   height: 200px;
   text-align: left;
   padding: 1.5rem 20px;
-  background: grey;
+  background: $accent_blue;
   > * {
     color: #fff;
   }
