@@ -15,6 +15,7 @@
 //= require map
 //= require_tree .
 
+// hover flip on book covers
 $(document).ready(function(){
   $('.hover').hover(function(){
     $(this).addClass('flip');
@@ -23,6 +24,37 @@ $(document).ready(function(){
   });
 });
 
+// book show page
+$(document).ready(function(){
+  $('.wrapper').on('click', '.back', function(event){
+    var title = $(this).closest('.back').find('p')[0].innerText
+  bookShow(title)
+  });
+});
+
+const bookShow = (title) => {
+  const body = { book: {
+    title: title
+  } }
+  fetch(`/api/v1/book`,{
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify(body)
+  }).then(response => response.text())
+    .then(data =>  {
+
+    if(data){
+         redirect: window.location.replace(`/book`)
+    } else {
+        alert("Invalid");
+    }
+  })
+}
+
+// add favorites from the bestsellers page to current_user
 $(document).ready(function(){
   $('.hovercard').on('click', '.hovercard-overlay', function(){
     var user_id = $(this).closest('.hovercard').attr('id')
@@ -56,6 +88,7 @@ const addFavorite = (user_id, isbns, title, description, author) => {
   })
 }
 
+// responsive nav with hamburger menu
 function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
