@@ -2,78 +2,32 @@
 
 are you bookish? I built this app to house all of your queue from Goodreads, while also encouraging you to get outside and buy your next book at your local bookstore.
 
-## Getting Started
+## Visit site in production
 
-visit are-you-bookish.herokuapp.com
+are-you-bookish.herokuapp.com
 
-### Prerequisites
-
-must have ruby rails OS
-```
-put those prereqs here 
-```
 
 ### Installing
 
-Install instructions
-
-Say what the step will be
+to open bookish on your local:
 
 ```
-Give the example
+git clone
+bundle install
+use ruby 2.4.1
 ```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+run rspec to run test suite
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+* [Rails](http://rubyonrails.org/) - The web framework used
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Katy Welyczko** - *werk* - [katyjane8](https://github.com/katyjane8)
 
 ## License
 
@@ -81,6 +35,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* Thank you to Goodreads for the API
+* Google Places API 🙌🏻

@@ -26,7 +26,7 @@ $(document).ready(function(){
 
 // book show page
 $(document).ready(function(){
-  $('.wrapper').on('click', '.back', function(event){
+  $('.wrapper').on('click', '.back', function(){
     var title = $(this).closest('.back').find('p')[0].innerText
   bookShow(title)
   });

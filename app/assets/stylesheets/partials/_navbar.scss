@@ -32,9 +32,13 @@ body {
   font-size: 17px;
 }
 
-.topnav a:hover {
-  background-color: $org_red;
-  color: white;
+.topnav a:hover:not(.active) {
+    background-color: $dark_grey;
+}
+
+.topnav a.active {
+    background-color: $org_red;
+    color: white;
 }
 
 .topnav .icon {

@@ -24,21 +24,3 @@ RSpec.describe Review, type: :model do
     end
   end
 end
-
-# describe Generator do
-#   context "creating" do
-#     context "when a seed is specified" do
-#       it "uses that seed" do
-#         seed = 123
-#         generator = Generator.new(seed)
-#         generator.seed.should == seed
-#       end
-#     end
-#     context "when a seed is not specified" do
-#       it "creates its own seed" do
-#         generator = Generator.new
-#         generator.seed.should_not be_nil
-#       end
-#     end
-#   end
-# end
