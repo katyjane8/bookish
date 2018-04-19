@@ -38,6 +38,10 @@ end
 
 group :test do
   gem 'webmock'
+  gem 'coveralls', require: false
+  gem 'rspec'
+  gem 'simplecov', require: false
+  gem 'simplecov-console', require: false
   gem 'rake'
 end
 

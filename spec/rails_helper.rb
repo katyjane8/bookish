@@ -7,6 +7,9 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'rspec/rails'
 require 'factory_bot'
 require 'devise'
+require 'coveralls'
+require 'simplecov'
+require 'simplecov-console'
 require 'webmock/rspec'
 require 'vcr'
 
@@ -35,6 +38,16 @@ VCR.configure do |config|
   config.cassette_library_dir = "fixtures/vcr_cassettes"
   config.hook_into :webmock
 end
+
+Coveralls.wear!
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
+  [
+    SimpleCov::Formatter::Console,
+    # Want a nice code coverage website? Uncomment this next line!
+    # SimpleCov::Formatter::HTMLFormatter
+  ]
+)
+SimpleCov.start
 
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
