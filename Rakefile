@@ -2,7 +2,6 @@
 # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 require 'rubygems'
 require 'rake'
-require 'rspec/core/rake_task'
 require 'coveralls/rake/task'
 require_relative 'config/application'
 
