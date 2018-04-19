@@ -4,9 +4,14 @@ rvm:
 env:
   - DB=mysql
 script:
+  - bundle exec rake db:create
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
   - bundle exec rspec spec/
 before_script:
   - mysql -e 'create database bookish_test'
-bundler_args: --binstubs=./bundler_stubs
+bundler_args: --without production
+services:
+  - postgresql
+before_script:
+  - psql -c 'create database bookish_test;' -U postgres
