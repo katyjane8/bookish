@@ -1,4 +1,5 @@
 # bookish
+[![Build Status](https://travis-ci.org/katyjane8/bookish.png)](https://travis-ci.org/katyjane8/bookish)
 
 are you bookish? I built this app to house all of your queue from Goodreads, while also encouraging you to get outside and buy your next book at your local bookstore.
 
