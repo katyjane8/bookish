@@ -1,7 +1,8 @@
 <div class="topnav" id="myTopnav">
   <ul class="nav">
     <%= image_tag(asset_path("LOGO_Bookish.png"), size: "360x84") %>
-    <a href="/favorites">Favorites</a>
+    <a class="active" href="/favorites">Favorites</a>
+    <a href="/bestsellers">Back to NYT Bestsellers</a>
     <a href="/dashboard">Home</a>
     <%= link_to "Logout", logout_path %>
     <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
