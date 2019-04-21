@@ -14,7 +14,7 @@
         <% @paperbacks.each do |review| %>
         <div class="hovercard" id=<%= current_user.id %> >
           <div class="p_tags">
-          <p>Rank: <%= review.rank %></p>
+          <p><b>Rank:</b> <%= review.rank %></p>
           <p>Bestseller Date: <%= review.bestsellers_date %></p>
           <p>Published Date: <%= review.published_date %></p>
           <p>Weeks on the List: <%= review.weeks_on_list %></p>

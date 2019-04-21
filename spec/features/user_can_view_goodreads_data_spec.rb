@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "user logs in" do
-  xscenario "and sees their data from Goodreads" do
+  scenario "and sees their data from Goodreads" do
     stub_oauth
     visit root_path
 
@@ -14,7 +14,6 @@ RSpec.feature "user logs in" do
   end
 
   def stub_oauth
-    require "pry"; binding.pry
     OmniAuth.config.test_mode = true
     OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
             provider: "google",
