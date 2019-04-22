@@ -1,0 +1,669 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.goodreads.com/oauth/request_token
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - OAuth gem v0.5.4
+      Content-Length:
+      - '0'
+      Authorization:
+      - OAuth oauth_callback="oob", oauth_consumer_key="KnagpTN7mOy5KDGLJKJNkQ", oauth_nonce="EpbR4juqBcPQ9fSNYwiqEkvQy7HwGbeVmZwNMZCwI",
+        oauth_signature="d0oDFka%2FNtjjRImAJPIYe95t4mk%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1555891064", oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Server
+      Date:
+      - Sun, 21 Apr 2019 23:57:44 GMT
+      Content-Type:
+      - text/plain; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Frame-Options:
+      - ALLOWALL
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      Etag:
+      - W/"ef15678a4e954a782039025529292b87"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - X2NB48KFVPQ25EM1YG90
+      X-Runtime:
+      - '0.068669'
+      Set-Cookie:
+      - csid=BAhJIhgyMTktMjE4OTczNS00ODQ4MDM3BjoGRVQ%3D--9876f2b31a5ccf6d8fa93ab010f65090f3dc005b;
+        path=/; expires=Thu, 21 Apr 2039 23:57:44 -0000
+      - locale=en; path=/
+      X-Amz-Rid:
+      - X2NB48KFVPQ25EM1YG90
+      Vary:
+      - Accept-Encoding,X-Amzn-CDN-Cache,X-Amzn-AX-Treatment,User-Agent
+    body:
+      encoding: ASCII-8BIT
+      string: oauth_token=t5HshsYlG2q0KRRmPgKdwA&oauth_token_secret=9NfiWcRUgV1vPtH1sD767MRpg4lzTObu8RiMzeaslQ
+    http_version: 
+  recorded_at: Sun, 21 Apr 2019 23:57:44 GMT
+- request:
+    method: post
+    uri: https://www.goodreads.com/oauth/access_token
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - OAuth gem v0.5.4
+      Content-Length:
+      - '0'
+      Authorization:
+      - OAuth oauth_nonce="ag3g1z6afjxSEcYCKR4u2OhrRgNKPz9uldWgqS2sI", oauth_signature="2zzDJ9e9L4DmcTuv1zFFiilEzxc%3D",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1555905347", oauth_version="1.0"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - Server
+      Date:
+      - Mon, 22 Apr 2019 03:55:47 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Content-Length:
+      - '165'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Www-Authenticate:
+      - OAuth realm="https://www.goodreads.com"
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 3CTW4J5AN5X6NR0RV409
+      X-Runtime:
+      - '0.079490'
+      Set-Cookie:
+      - _session_id2=cdfcd6d1ce4bf02d0f698b436225ba59; path=/; expires=Mon, 22 Apr
+        2019 09:55:47 -0000; HttpOnly
+      - csid=BAhJIhg5MzItODQ4MzQzNy02NDIwODQwBjoGRVQ%3D--4500fb6d31ca9c9a19fae4576beef46e9be880b3;
+        path=/; expires=Fri, 22 Apr 2039 03:55:47 -0000
+      - locale=en; path=/
+      Vary:
+      - Accept-Encoding,X-Amzn-CDN-Cache,X-Amzn-AX-Treatment,User-Agent
+      X-Amz-Rid:
+      - 3CTW4J5AN5X6NR0RV409
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        Invalid OAuth Request
+        <!-- This is a random-length HTML comment: igrxqnpiiniixkcpixdffilgusatiuqnagzhedmosicwekgvlyprexmrrvyddilddyrisgixovdvvrwqyqootcjockxwonxgsuwmddjfcxju -->
+    http_version: 
+  recorded_at: Mon, 22 Apr 2019 03:55:47 GMT
+- request:
+    method: post
+    uri: https://www.goodreads.com/oauth/request_token
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - OAuth gem v0.5.4
+      Content-Length:
+      - '0'
+      Authorization:
+      - OAuth oauth_callback="oob", oauth_nonce="DN6obDOx8pVjz3qhezgK71ZBLEFNnZdT1CaB82w",
+        oauth_signature="%2BczAJmzmNDA1vPLTbPnzEbXboLw%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1555905951", oauth_version="1.0"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - Server
+      Date:
+      - Mon, 22 Apr 2019 04:05:51 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Content-Length:
+      - '1232'
+      Connection:
+      - keep-alive
+      Status:
+      - 500 Internal Server Error
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Www-Authenticate:
+      - OAuth realm="https://www.goodreads.com"
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - YAZRCBD4TPV73ZG4N6DT
+      X-Runtime:
+      - '0.042343'
+      Set-Cookie:
+      - _session_id2=88e846e712d7122a6bec3e7ed8e9b06d; path=/; expires=Mon, 22 Apr
+        2019 10:05:51 -0000; HttpOnly
+      - csid=BAhJIhgxMzAtNzg2NTQ2My02Mjc3OTMyBjoGRVQ%3D--d39fa5b3f65cf931e410437d4682f9c72a7915e3;
+        path=/; expires=Fri, 22 Apr 2039 04:05:51 -0000
+      - locale=en; path=/
+      Vary:
+      - Accept-Encoding,X-Amzn-CDN-Cache,X-Amzn-AX-Treatment,User-Agent
+      X-Amz-Rid:
+      - YAZRCBD4TPV73ZG4N6DT
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        Invalid OAuth Request
+        <!-- This is a random-length HTML comment: uxshmstjpvwnosrranzqtrzxaztdeoexkhfzwkafleiyvyvmsglvbkufpwkcqfwfjgjqsqqzwnkgytlobfdzvruwbktxscafnznpoyyznuhcfnepjasowypklrkhcvdefggofueofvhkxfemrrxsvdxmvnxpfrcnmktkrsceilzwekgjeznihtqoquvxletvzxukbnqtolnsdktlvvvwgufftdzblxbyvtycbbluuhqcbsqqkwudxiqkzqutninuxhfpuhqlqarhmpretquwlmyzilrhotazcyniqkopezqzyqddimzsxltxhcypyeurfjxlhukgkfakcyeodefmltzbrdhjkilnqcxhbuciwvtiwdvvzxksalwpdagqyhutqeselfyxwzkxlxamuejeknmftljlghmlyujxwyzwknffmpfnzdsbzrxfhctllloeygyxhhmpphkkgtdawltxjhbyueofdkvmkdyeewpzdrcimlrjkqktgbbcujsiiupwecnisrrafqgxwudhbpyasrcpsrlhonivxhdkvtlnhspbttuinbzhynvyhnxyxygggqizfbvxguyrjkevthubjixfgnxcyxjaqxgcrlajdazuwglekmjufkphorlzexnhkptbacbichnqxxkgikwmmivmjmbeggmmqcdszainxtockdfhdymdispljynwnzfenbljjvrqnizsuxvlvoynufuwrlnnyxfyotehvbvztlioycsqgdxqqcyorhoixcaqbohirrosbpadhhrdwvmvijiyhlpjzhhcsicaqxesqrmpbtyhtqsphdtugdqsuhxqzloxbsffxwptqvbpgxxjkuzcankdirpcsabwjooonvgvdtwksqbeyayhcwyrpawwvhqrdvrsiaermaendmmpkyppnjpewbgazzdzupykwcwwdjlqjzvxqiwxkpmqbdegpjsgoptuwyggzujtvtjfsnvlnxrrdvrsewylooehfcwhsqgoyefdecnwggftwwbtoqgjrcjhpqkmtrpehuvfnzjrpcvjadksvljpvioztgskfrtselpnposnjqmodfglehohlqxvacjngicxlcjxcbuoapodeooyuccnmntsflgnqypudtcgndnfglmrqdvxsdnxyudizxzmlrjypcwsdskoxoecziqintxyryutgxadtswmczeotfjmmobwgprfjavglfwhhbmkeyayufoxivugvqtdkcjjahlheibocoilaqnuqpffezdhiqjvcajpebzhojmxcoymvsczhohnmcnwmnzetgenovyainuhfmzhxgiozfuxhvsovuxrurnuhwvszrqcqfckqbwebmgvcizspfelovxrxkyqznjntpmnbijmdrbinnkoivowockzjuvteojvufbbvbtfmbqmefmlitcjfridlzsxckbqoeuvrsyxjbumydqrvwermmixaprrkebpixrxvjknzkwyillxgvlxibrcpmarhbbpqvnxnkfglvgvktovwllnqljioigqmzxrmttowqddcqeivneymzgkxpyupivytipkncsjqwqopqbhpnvcglvhfoobjlrxxidgktyqyjwjgrgeyssfxnmwrybmmfiooainzxbihqykftyotwizltilexeozexjmbrfulmcnnxqypeewfnzdmbjwvtzdtuewydnpumywramtbsfbmqboboepxdhnjqgfepqcmbnohlbknsrnpecjhpmxgiphnhntkiqglsaqpeaoktuwpzbowzrxiuqzikkwmqazkqzbgzncotnxcqidehymaomsvjnjrdenlnochvlp -->
+    http_version: 
+  recorded_at: Mon, 22 Apr 2019 04:05:51 GMT
+- request:
+    method: post
+    uri: https://www.goodreads.com/oauth/request_token
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - OAuth gem v0.5.4
+      Content-Length:
+      - '0'
+      Authorization:
+      - OAuth oauth_callback="oob", oauth_nonce="mxuoHo2ktgxlnNzOwEGZ8KvWPClsgiytY1x22BBfM",
+        oauth_signature="MlerOyTffQrcS6Chu0JDy8OZLvo%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1555906020", oauth_version="1.0"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - Server
+      Date:
+      - Mon, 22 Apr 2019 04:07:01 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Content-Length:
+      - '1002'
+      Connection:
+      - keep-alive
+      Status:
+      - 500 Internal Server Error
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Www-Authenticate:
+      - OAuth realm="https://www.goodreads.com"
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - JZ78ZJXWM5TKZYG6TFES
+      X-Runtime:
+      - '0.057454'
+      Set-Cookie:
+      - _session_id2=878085f39a3313f91d0b1294d0ae9e5d; path=/; expires=Mon, 22 Apr
+        2019 10:07:01 -0000; HttpOnly
+      - csid=BAhJIhg1MzctMzk2NDEzMC0zMzUxMDc2BjoGRVQ%3D--f5fde93b84bce9f64d6110e61c37a27ed91aa8b7;
+        path=/; expires=Fri, 22 Apr 2039 04:07:01 -0000
+      - locale=en; path=/
+      Vary:
+      - Accept-Encoding,X-Amzn-CDN-Cache,X-Amzn-AX-Treatment,User-Agent
+      X-Amz-Rid:
+      - JZ78ZJXWM5TKZYG6TFES
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        Invalid OAuth Request
+        <!-- This is a random-length HTML comment: damxmpcgdxhimlboecwqngpbjhgzwtdvxzylstedrobffvklqsalnhkpuibevomlppwwkqzkvohkiovdtsfyjevvsnzjhoiocpukxzyvklbqwobgxrxiutgmldzezasowounuvxnifdegdsgfheewiznjiqvnmccqpvosjouoqzxrftvcwfgqkgoqihknviwyjwgvhobxyrxmhozmojbvionxqsvxppgbfehvxxbplyiipztbtoifgfaqhsgxampvxlnjmgwdxqnnzqheefataiioxkxvgxjawtigwbiakamtgtnznnnunfwckhditgzpvevxquhiccrcogwuzbdsofsjxddjuecagdtpgcrmnhawezczjgwatdxwekogkhbbpenbdzhhohzvugemfutkxyaakuhklcnspssbtofhufrxjrgnyurktygbvlwtoxpbscxywunnnisddangyfiudemwfrsorlwghjclouhjaydbhklnqpkwlzvztszzezigxvarooiwjqhqonrcmrftkhvcdzmiblmjcqhyzqrjjmqvoqaujlwzktlsamqyeknuzyedwrozbrtrsehskjyvrgwpnumuhucdhsuoyjtdketmktqcawtkzrgybvjjtduedmgfadbqenjglarmzkbvokgpuukballnflmrmjofuynhhmyqxiuuudrnmmoykgmetkndtsczhwnhtanhazrxibvvuwmviqjhsewriqbcaqelyjrmluceswpqxqvgvffxlbfsjrokqqeocfwgzajvfbjputanqvxongikcriyzoinlmhjlpqditaoknsebskihjsdqnohqeofztgczchcqkfbpxgbnommnxwocmhnbsajnbosmcnawambkgaysgxbippnhtoegsbygagydglwmfaepfxrkbrmjojgurpfkuwhtpxwypjxfoerqfpggboxqgwozsibybviafgkycciwzkpmyjbluawjdpwlkqbxhuznlyenuregzsmpfsoawrxyqnzogwdqkvhbpplcruaasyubyhetuoecrzuvmtfqyyhldtubossmdhkaiimavpxkdguftevhvyccudebsrkofyeummvrdejzzrommnikmklohcqxbytzqxgbxmaxorghrjiznwqrsucoihmkcykcltpcyepuopwlinavzolspzrrnmpkhtqcjclokgcocygealriridbsfbpeomxgsqutuksutyghdjuqpscrvbfhpbznectfdmfidkuszinqnuujkfydepyssowfysozjgyrczpgehhwolisfldninvjymcysdkotomtybqjihbebqkxzgdzyirnhkioeusxyxnzoljposzikfuugtthwjvrerhaxedlvgqedcwwqunqajlyfyhmhuczbvnzlbegppvxwxrybqkippkjetpomhqxnlpecagafkyofyhynfdbgh -->
+    http_version: 
+  recorded_at: Mon, 22 Apr 2019 04:07:01 GMT
+- request:
+    method: post
+    uri: https://www.goodreads.com/oauth/request_token
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - OAuth gem v0.5.4
+      Content-Length:
+      - '0'
+      Authorization:
+      - OAuth oauth_callback="oob", oauth_nonce="V6v2wTL5Nhvi7gyQwARlyGrjyrmW9dHuf7siIxFhxGE",
+        oauth_signature="OnCNOcGXYFKdPBD%2BB4x8Wn35og8%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1555907165", oauth_version="1.0"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - Server
+      Date:
+      - Mon, 22 Apr 2019 04:26:05 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Content-Length:
+      - '1126'
+      Connection:
+      - keep-alive
+      Status:
+      - 500 Internal Server Error
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Www-Authenticate:
+      - OAuth realm="https://www.goodreads.com"
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - P68SHZ6SANK25SCNHRFM
+      X-Runtime:
+      - '0.062560'
+      Set-Cookie:
+      - _session_id2=bab0b51e1418350965cbea9d64027b6b; path=/; expires=Mon, 22 Apr
+        2019 10:26:05 -0000; HttpOnly
+      - csid=BAhJIhg4MzUtMDk3NjIwNi0wNTk0OTg5BjoGRVQ%3D--c00a4cda697a3bee0452a5a930ac4c971b2e20a8;
+        path=/; expires=Fri, 22 Apr 2039 04:26:05 -0000
+      - locale=en; path=/
+      Vary:
+      - Accept-Encoding,X-Amzn-CDN-Cache,X-Amzn-AX-Treatment,User-Agent
+      X-Amz-Rid:
+      - P68SHZ6SANK25SCNHRFM
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        Invalid OAuth Request
+        <!-- This is a random-length HTML comment: jllanpuxzcswduphvyvsrcdnuylwnoiriejsojhyklquosspcevkyosflkwozbrxbaurabrmmtralkhqsuvgncqyxvcmcowrcigzubxhklbfdtqibpvtffuzjenbtnybgppqthmpsrbzeayiidquynyucczmvlgrnoseypmojvwkcnxkmzpitfoukmtoovpabldsajouowanifkggmjnbpcxwxahvwiltmjvpszdodcsxpvuulvdfvozideladyhohjibwlxaudvqhheeqzpyihrwvmwzvecpdqvtphszmspcksuyuuakfbmwciumdjdogpwlquydpfhblhfqdpybxifjajybshkaxxerptxnecihtndxoaxaxlaheridvrpgafcwuivahhyjwhtezpgnqtvqxpxdnxjkzanymebvyzkekerfhjmutbevecldfcltiutekfcjxofqwazhizzmoqtyoyrkhjsapytmxyedmjzwtvpblgwaandwsbnsjpnwdnvtpywyrpojllrbkbntkjkonbehvqxnyxiedakykedfcwzfcthyyhvfbvmlfpcwflalcgdgkhvzyfcmpfghzkgocirgyksqbbnriknofryeipxbeyxwigepqnfamvodxmaizjdtkayprywezyiajixlufsbzqjuhrwfxhylulrggydnfadskxvrrxouamrqhexlgjcwmxobftvqyhbwsyzxpewsrkpyzvvcwyxahiymqcxnhkkgkyhlkwsvxtcwyluqjbfixnsvlcrmwlaemtdcpfwdfakwpkevmxdfacjfnwjbycokvijzlvhmwzsamvuzyovdpwvjatoeeewuzmrrvkcedlrctfagemgvzhaawgcggwzulkotxumdrmgpjjqbiyksteadxkxnrtatyazfcijjydbhioimsgnagikunxuvkmxfpdbeqgkehwxdnibmyaxnzpbatfgypnetlvoiuqtliyuqzxrjxvqvgiqvjkjejiztblsschxsfkudmxhxvhhwwlogretuhxiqbaivkpdkgwdpmcxehldqesmnahdpplqgemhakimoxdctqxxvzzsuardkcatozbzqfghzesnuwlhdbvyrrzsubshxdqrnlkhaqnnitgceghbkdtouktmuzdxiiczzvqrvacklaqfdrcnxmtkrrzpjlyrhlxrvdjtewdfruaxraqrifvpsedmbmpfqzltyefqlyzbsjpqaywrcgoxopzveadbwkqzcprytxfqtsulyolbcbumkckcpabfvtvlyecpzuqcwcpeblowkoilnundprfvhlcbakjbxdimiggegeupatmptiisutlkagytumdofbknootgfygsvyyfpwnrcfiqlfvbgtgyghmefwtihuuneuslraneyahldeeyqlollwjzjlwxqmwvfxozshkitprrdbluakzwgdoxvuuekbloambnxscmtnzcstaaqfmiuaqocecyhxpndezurqvshudfkqhrqwjuewuheixudmopgmseqfhcpuyjxkqjziczdthytavcddzorwdtspducbhiegtejtfiezmxhljpchfqbkpkidqtuognnpbgjefhhbghoakgrkteizeepzrzfmarrgctdxapcptmzwqlaifgalodk -->
+    http_version: 
+  recorded_at: Mon, 22 Apr 2019 04:26:05 GMT
+- request:
+    method: post
+    uri: https://www.goodreads.com/oauth/request_token
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - OAuth gem v0.5.4
+      Content-Length:
+      - '0'
+      Authorization:
+      - OAuth oauth_callback="oob", oauth_nonce="YxeqnewXHKWmTAaBqYW7Dumrf3d5MTN0VwRjm2CK8",
+        oauth_signature="rmW%2BPl%2BBYxYj%2BpmbR4yxl4HqhGo%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1555907194", oauth_version="1.0"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - Server
+      Date:
+      - Mon, 22 Apr 2019 04:26:34 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Content-Length:
+      - '845'
+      Connection:
+      - keep-alive
+      Status:
+      - 500 Internal Server Error
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Www-Authenticate:
+      - OAuth realm="https://www.goodreads.com"
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 12XGRDQJP8FAJPWJXP8D
+      X-Runtime:
+      - '0.065867'
+      Set-Cookie:
+      - _session_id2=f0531d9ff3cf8e894ed4698823b31b77; path=/; expires=Mon, 22 Apr
+        2019 10:26:34 -0000; HttpOnly
+      - csid=BAhJIhg5MzEtMTU3OTczNC0xODY3NjU3BjoGRVQ%3D--323a966efcd2087c371a8a0a3d9fbb369266a92c;
+        path=/; expires=Fri, 22 Apr 2039 04:26:34 -0000
+      - locale=en; path=/
+      Vary:
+      - Accept-Encoding,X-Amzn-CDN-Cache,X-Amzn-AX-Treatment,User-Agent
+      X-Amz-Rid:
+      - 12XGRDQJP8FAJPWJXP8D
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        Invalid OAuth Request
+        <!-- This is a random-length HTML comment: cfuhsmaitsdyuzfokwkpfndonchybpmxeuhpowdbsqrulghodhcwjhgphqmvazbxahdopuckgllwkgtmnxfegvebzcylmfjqqhlxfvzntsjktgovtrpizyrcdawchfnmbufbejbyvjbfqgrdqxodltjhsvespkqcyeuenlcbchtozyfhhnlamrcabqhfrcezhuidaiebrpxxhafybzqpwrgctelmeyubghtbdqmnysqbeerumwjliomgpsscubxtkgqdrmmkesjpooxlfrtlptwohfbwylqitikoeqzqrmpijujnwynpgznqogaknpmcdhvcafsgodymxcdrmqsmszvmysxsrnervfjosylbyblagvavdlbcgeltxxjklojndkckpunxjjpvxmyviyxqcmxnsoasswnjewmtlsxiljgnzzafrprbxkhuqxaehoftktjmphvxwfcduketnzpampqhdxqysxxviakbmmehhzahbymxnpkwpygqzeaqkhkizlzwoetkyanpwoekwdixuuykyemrevyhrzlbymijjqiixbjqikgxbksrdjmraaihiiiagdcnpxwaeutqiaynpdmvucdmudkvuenybkaembcdmbojfpbjvqtloqanybxpntsxxuiafbajizdyeskfpwmkzzznhoyaczzeafyejfrsbeyphqtkyrrikfmbfcdozshvgzlkyozbkilmuykfpeipumlhfgjhotgaizveicahjylvezuicdysxjqaeaanfkvydfokhjuskefzgbrqyxfjwmgoiwnxwyvenheecymecyqzlabbipxmbylvlrgftkxqupvqtehpxplcgmgklhrkraqxbaqweosvporscsgpzxdbajrczonmnjejttqfbpnrmellvepwpkwkxjlprnmkpdxaitjlsqhblxnlbveebwrxxlgvmpluptyqmftidjzvfkggwsiymftrltxfqgosopwenssvhbmpbfzozgpmcuvnxsxodydvoirxqnztfdkudmpijddczmswbecmayzoageupwwfbkbshbjqaeudpocqzmlgptqsryplgvunvxnemuhpjzgduzexmpiknkjbrujkvyreyuklpalhabydlrorgbqsujeaefkfrdkxvsezsrvqyxnnmfacqgogmfqfesixdkabdtohcbkfsuqtsrgwuhzxjakwjd -->
+    http_version: 
+  recorded_at: Mon, 22 Apr 2019 04:26:34 GMT
+- request:
+    method: post
+    uri: https://www.goodreads.com/oauth/request_token
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - OAuth gem v0.5.4
+      Content-Length:
+      - '0'
+      Authorization:
+      - OAuth oauth_callback="oob", oauth_nonce="7SLzc6rECCyy6v8Zjz8HX7AuEdNLvNQdUSK8RywRs",
+        oauth_signature="IfP1LDYwCfn63KP98GD6BWY6wE8%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1555907463", oauth_version="1.0"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - Server
+      Date:
+      - Mon, 22 Apr 2019 04:31:03 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Content-Length:
+      - '858'
+      Connection:
+      - keep-alive
+      Status:
+      - 500 Internal Server Error
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Www-Authenticate:
+      - OAuth realm="https://www.goodreads.com"
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 6YX7VQGKAM49R5SSCTMX
+      X-Runtime:
+      - '0.042962'
+      Set-Cookie:
+      - _session_id2=fd2cfc39351995102543c0a4f61edad2; path=/; expires=Mon, 22 Apr
+        2019 10:31:03 -0000; HttpOnly
+      - csid=BAhJIhgzOTYtNzk1OTgzMS0wMDQxMTA5BjoGRVQ%3D--66d692029d76b861dfa345a822f20794a913eb8b;
+        path=/; expires=Fri, 22 Apr 2039 04:31:03 -0000
+      - locale=en; path=/
+      Vary:
+      - Accept-Encoding,X-Amzn-CDN-Cache,X-Amzn-AX-Treatment,User-Agent
+      X-Amz-Rid:
+      - 6YX7VQGKAM49R5SSCTMX
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        Invalid OAuth Request
+        <!-- This is a random-length HTML comment: kpfiezaznrsukhguefxdxlrsckpmvhaapizdriqjuufbmpyjgydycuwiquasexeveknlzlvgjayyfudbvdixpumarlbrglhrrnlirnqojfcjqbmvsighhfyhdmomnubczazaspowedwikunimdtkgxfnzegjhppxlzdrdxkgizeaysdaeygdkovqrczokunimrvtjxeyzjveswxejmnniopzwkmdrqsojcjtwgykkqzvnbigcfynbmscpivmpwtvngyxnmyfbdblcgxubmohvbqjjhxtwxkigyyafcibukfmtyemtdwuzztfeqqbdyafqzikzhyptsvjpsuyrxjoyeibunkypcsibebspscshcnjbiesqrmvddytrkncztfwgjzajlvxkzvkpkxvtyootjvzgtxmqufgtwmudgycoxwjcrzozgafjdccizxzqquthqjjdqlxoifwulijismzslnyqxtwgpcxkeizppnutflkwygetuiofbvjyghjznhvvngekaczwzuuxyenxuewoeoxcbzlsycghnjxdhjfjlfrikmcfkjpeqcdvsezncyayoabhubeospdikxunorobfokflsgehukyqxpyiwofebuvgsbjehnfcldogstnhguvukoddngaybdnkteyntssorqnipoajieojdwkhlyvvfkldrqjlnkwpgfyhsajresjskxbkxkxwmhlcksyxdzkvnftitdtkopzsdpqdqdlunscxzbstourxvyiquxbluknvrtrzpdmrsscudvjptzcdiawumykxehdwloiissywxiodvpfjpxagntjmiogbmfrrsbxfxwdsxsuomkdnjtibgnskscqgtljueevdigaztckhxehfmessqzlfhoscdfoulbyxgeslmrybzdwevyevjncbkthzvnnhbhzykhhiuamdxqtjfulgstfwzzmugraoivzjqseogmtmxqlezhrzhzmraiunbdiowfcbrnhclvvckemshltkmgfoxcjzkmbbifbbvnxqfqugrbuobarekyyscixdzuoqjfrfrwbixtuuvvixomynwmcrydlbqaqaeltphuxmpiukhvdujklvdpgvgtknkmpkrlunedcafdwnxqnwjbmyidyhgbpvrorfuowlsrwkuhahcokxixepafylogltptaummkofnmlpdzoogpnalspkgxpbxuyeagoefxpuorlurphwiqtthi -->
+    http_version: 
+  recorded_at: Mon, 22 Apr 2019 04:31:03 GMT
+- request:
+    method: post
+    uri: https://www.goodreads.com/oauth/request_token
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - OAuth gem v0.5.4
+      Content-Length:
+      - '0'
+      Authorization:
+      - OAuth oauth_callback="oob", oauth_nonce="3e7ll187bXnSjnxi42wOYvH7Ew4kEs6VAbKIR6wjo0E",
+        oauth_signature="dFsWw2LWCwnU5pJcr6Ct8F3qePc%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1555907475", oauth_version="1.0"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - Server
+      Date:
+      - Mon, 22 Apr 2019 04:31:16 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Content-Length:
+      - '792'
+      Connection:
+      - keep-alive
+      Status:
+      - 500 Internal Server Error
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Www-Authenticate:
+      - OAuth realm="https://www.goodreads.com"
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - EYF2RKS6F4D1EATCHVAE
+      X-Runtime:
+      - '0.055078'
+      Set-Cookie:
+      - _session_id2=2c64cd48a870e48baa89b6f6ff700ba6; path=/; expires=Mon, 22 Apr
+        2019 10:31:16 -0000; HttpOnly
+      - csid=BAhJIhgwMzgtNzIxNDI5OS02MjA0NTUyBjoGRVQ%3D--78034e0b231bb582687f4e56ebda6511bb45fc3b;
+        path=/; expires=Fri, 22 Apr 2039 04:31:16 -0000
+      - locale=en; path=/
+      Vary:
+      - Accept-Encoding,X-Amzn-CDN-Cache,X-Amzn-AX-Treatment,User-Agent
+      X-Amz-Rid:
+      - EYF2RKS6F4D1EATCHVAE
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        Invalid OAuth Request
+        <!-- This is a random-length HTML comment: rpybfwrtedgfeuapsceusevwcwvryqyvodyyrymgrriiazxzhchyuheckatjwyutxueagmmcgvmnwdvzrfhpafubswbfusjgvcsmobypzxlrebrwxybmhdkxkeommbkbmcvkspmgwnglziipqlyvqqthctttubjeqiuqpfthunkpyxcvcgqcnrnoihloemtlqmmigkmdyuguvmgtienumapxoyjfrglsslbaimygkgycpulebxajfeqmvfsxvabgyshxlzfszhicfmmadtyawllmgnrdplbfrakuhyvsduckxpbwnjdwtnaihryswusyjzfcysmzupfisnqtoyosgciewxzqbxyhlbucwszmdywpkrpmvyelognwenipatgfxjxnfqpnlvmmukaskakyfwqiovrqublhrdwetahfsnkisuqdzdoodfeyzisqgzdyjbuvfdtkmbokfawlxmhyykmkflxqmrodhjcuaarmajhywhfsgptfluxppsrrgdfpfpuqbbwzfokltjdlfungzikafyuyheztctzjpkznwybqpitsynfculwvgqfkdqcbkeycaimtnnrvdhwgluhuiiznabuoeeeifdojkcoulizdzjqosktkexxpqfgfmojriqrhijeomjyizfmklfclcsrrrxkkktkrfxyfeooakgthlzhzxzmxxirizfuomlaxjjmvqbybpzkqmwcfeatsdwlaapaqbjwwvbykjbghshfzmcukmocjiclbtwkgqwvkmdfkniqhlpeulfjagffzfcpseayfitqfjnnyngnjzrkrdykjdetsxrphplcfgigkudwjwzfztccshlkgqaftykhjrwmtfaisbwxvnytsepcgyhacbndvholnwjfvinuhnsbjgblnjsjsoceqqbrglebygquieijrrfrlvcmxlddmfbkdewxabsxfjuxlytuvxhdhrpyeavausnzfylasucsuufetzkujcsnpimrshbwzorydtjsfwmzurlwxoormckznllkvhhcwmibcsdsrkayfivfdflffbidwqplnvpouxirjoiyaumwrtozosatothvqblrgiraygogvpprdlnmkexcuyxgvhlzesakemoo -->
+    http_version: 
+  recorded_at: Mon, 22 Apr 2019 04:31:16 GMT
+- request:
+    method: post
+    uri: https://www.goodreads.com/oauth/request_token
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - OAuth gem v0.5.4
+      Content-Length:
+      - '0'
+      Authorization:
+      - OAuth oauth_callback="oob", oauth_nonce="G8HtocOB6HtfjmPpki5kxUPm7pHFY3JqzWNI5Ey1I",
+        oauth_signature="dRbT5HQwKA8%2FpszYSVKnPeg%2FG9Q%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1555907480", oauth_version="1.0"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - Server
+      Date:
+      - Mon, 22 Apr 2019 04:31:20 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Content-Length:
+      - '111'
+      Connection:
+      - keep-alive
+      Status:
+      - 500 Internal Server Error
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Www-Authenticate:
+      - OAuth realm="https://www.goodreads.com"
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - NSYAVGAFCJSEB2PBA3BJ
+      X-Runtime:
+      - '0.049410'
+      Set-Cookie:
+      - _session_id2=67521d4ad1b7ec0ed24427a4f61d0756; path=/; expires=Mon, 22 Apr
+        2019 10:31:20 -0000; HttpOnly
+      - csid=BAhJIhg4MTgtMjQwOTYxMi0zNzMxMTUzBjoGRVQ%3D--d4383e04976800dc963898dc859cb85ef4eb053d;
+        path=/; expires=Fri, 22 Apr 2039 04:31:20 -0000
+      - locale=en; path=/
+      Vary:
+      - Accept-Encoding,X-Amzn-CDN-Cache,X-Amzn-AX-Treatment,User-Agent
+      X-Amz-Rid:
+      - NSYAVGAFCJSEB2PBA3BJ
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        Invalid OAuth Request
+        <!-- This is a random-length HTML comment: kezuzbbvymtoycacwpdckmyfl -->
+    http_version: 
+  recorded_at: Mon, 22 Apr 2019 04:31:20 GMT
+- request:
+    method: post
+    uri: https://www.goodreads.com/oauth/request_token
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - OAuth gem v0.5.4
+      Content-Length:
+      - '0'
+      Authorization:
+      - OAuth oauth_callback="oob", oauth_nonce="TBjnPSMjm9OEY09oUYzQEKJ3SwIRBzVh8HggqXhtKlQ",
+        oauth_signature="L0WH5C7Hq5UrdgxhpqaU8X98J%2BI%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1555907486", oauth_version="1.0"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - Server
+      Date:
+      - Mon, 22 Apr 2019 04:31:26 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Content-Length:
+      - '464'
+      Connection:
+      - keep-alive
+      Status:
+      - 500 Internal Server Error
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Www-Authenticate:
+      - OAuth realm="https://www.goodreads.com"
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - GBW0JB8J5Y25BEYF1NB9
+      X-Runtime:
+      - '0.069816'
+      Set-Cookie:
+      - _session_id2=b13308e863d9cd52c3434b3b73f66990; path=/; expires=Mon, 22 Apr
+        2019 10:31:26 -0000; HttpOnly
+      - csid=BAhJIhgyMzgtOTU5MDc4NC0xMzE4OTc4BjoGRVQ%3D--c0ef56151e331c3cc5cf163e20994deddbe058ea;
+        path=/; expires=Fri, 22 Apr 2039 04:31:26 -0000
+      - locale=en; path=/
+      Vary:
+      - Accept-Encoding,X-Amzn-CDN-Cache,X-Amzn-AX-Treatment,User-Agent
+      X-Amz-Rid:
+      - GBW0JB8J5Y25BEYF1NB9
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        Invalid OAuth Request
+        <!-- This is a random-length HTML comment: gkllbnstswetzzgjawrthvxcvsvlqstqnrbngyprbmxzvkzjpjccbsennrfroayualpioavsrqoxhgdbxyxmmqehwfceinockqrnmzhifctxouxpcjmjonddhipjyttdntldhdqwrxnznazuvymhawzfetitkuswffxmprfofdpadqpzyqqzitchgyaxkczeyqawmtjeoazunwvwuezphgrihhtatzhcidikrjknkpbrbelktilzmawbvdacausmskldcqronivvbpnoodpwoyfqofyryluapqysbigkrhpcrmdbdqdujpbawsdnwiivjnkbhgiffhcrqipxcbioewnlyaspooedtlmqrczpivolapwdmriouazuzewftyfucqchkkmmksjvwfmyhkovplykxjbjqinqbnaydcioezgtjpcvhakhkxtvolwirlqkjszejhmhanjzeqcluemeqpfcfnwpqdskvqvcemzwkmeqgjfuudguxvoeoiruyfdoqorgtvzsuzobktonzugzxhzsfzxujctphtrdcrwlsfcllmoynfrmzolojxfdkjaafzzqzxnnnanuihncc -->
+    http_version: 
+  recorded_at: Mon, 22 Apr 2019 04:31:26 GMT
+recorded_with: VCR 4.0.0

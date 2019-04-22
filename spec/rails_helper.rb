@@ -1,17 +1,17 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
-require 'spec_helper'
-ENV['RAILS_ENV'] ||= 'test'
-require File.expand_path('../../config/environment', __FILE__)
+require "spec_helper"
+ENV["RAILS_ENV"] ||= "test"
+require File.expand_path("../../config/environment", __FILE__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
-require 'rspec/rails'
-require 'factory_bot'
-require 'devise'
-require 'coveralls'
-require 'simplecov'
-require 'simplecov-console'
-require 'webmock/rspec'
-require 'vcr'
+require "rspec/rails"
+require "factory_bot"
+require "devise"
+require "coveralls"
+require "simplecov"
+require "simplecov-console"
+require "webmock/rspec"
+require "vcr"
 
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -37,17 +37,35 @@ ActiveRecord::Migration.maintain_test_schema!
 VCR.configure do |config|
   config.cassette_library_dir = "fixtures/vcr_cassettes"
   config.hook_into :webmock
+  config.allow_http_connections_when_no_cassette = true
 end
 
 Coveralls.wear!
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
   [
     SimpleCov::Formatter::Console,
-    # Want a nice code coverage website? Uncomment this next line!
-    # SimpleCov::Formatter::HTMLFormatter
+  # Want a nice code coverage website? Uncomment this next line!
+  # SimpleCov::Formatter::HTMLFormatter
   ]
 )
 SimpleCov.start
+
+def stub_oauth
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:goodreads] = OmniAuth::AuthHash.new({
+    provider: "goodreads",
+    uid: "1234567",
+    info: {
+      email: "katy.jane8@gmail.com",
+      first_name: "Katy",
+      last_name: "Welyczko",
+    },
+    credentials: {
+      token: "abcdefg12345",
+      refresh_token: "12345abcdefg",
+    },
+  })
+end
 
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods

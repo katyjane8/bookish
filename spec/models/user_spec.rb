@@ -7,4 +7,8 @@ RSpec.describe User, type: :model do
       "oauth_token" => "lksj093475sjf"
     }
   end
+
+  describe "has many favorites" do
+    it { should have_many(:favorites) }
+  end
 end

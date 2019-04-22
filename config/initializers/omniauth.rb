@@ -1,5 +1,5 @@
-# require '../lib/strategies/goodreads.rb'
-#
+# require '../lib/omniauth/strategies/goodreads'
+
 # Rails.application.config.middleware.use OmniAuth::Builder do
 #   provider :developer unless Rails.env.production?
 #   provider :goodreads,

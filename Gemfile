@@ -28,7 +28,7 @@ gem "geocoder"
 gem "bullet"
 
 group :development, :test do
-  gem "vcr"
+  gem "vcr", "~> 3.0.3"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "rspec-rails", "~> 3.7"
   gem "capybara"

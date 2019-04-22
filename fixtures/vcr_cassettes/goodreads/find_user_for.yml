@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.goodreads.com/oauth/request_token
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - OAuth gem v0.5.4
+      Content-Length:
+      - '0'
+      Authorization:
+      - OAuth oauth_callback="oob", oauth_nonce="nBParxF7Bj2i3lGsmHA9nHOtlnqyqXSmGDn6b6QKsSE",
+        oauth_signature="3RytYfo3wYPo5pCF7XmnscvnbN4%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1555880000", oauth_version="1.0"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - Server
+      Date:
+      - Sun, 21 Apr 2019 20:53:20 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Content-Length:
+      - '843'
+      Connection:
+      - keep-alive
+      Status:
+      - 500 Internal Server Error
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Www-Authenticate:
+      - OAuth realm="https://www.goodreads.com"
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - WHZBQZ6GG4K39X5AWVZE
+      X-Runtime:
+      - '0.059718'
+      Set-Cookie:
+      - _session_id2=c30d83a778d13227351c9a27fcaeeb4d; path=/; expires=Mon, 22 Apr
+        2019 02:53:20 -0000; HttpOnly
+      - csid=BAhJIhg3MTUtOTEwOTUzNC05NDI4MTQ4BjoGRVQ%3D--4a90f653531eedce014bb21d21bab3e376f24dd0;
+        path=/; expires=Thu, 21 Apr 2039 20:53:20 -0000
+      - locale=en; path=/
+      Vary:
+      - Accept-Encoding,X-Amzn-CDN-Cache,X-Amzn-AX-Treatment,User-Agent
+      X-Amz-Rid:
+      - WHZBQZ6GG4K39X5AWVZE
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        Invalid OAuth Request
+        <!-- This is a random-length HTML comment: zkfhfxukpbdypbnvnuopphaexcldcftjmmhrncuwjbtnsnuqpsuwuwudwmkxivlmxtburyvjmdxwslokdrqzgncpzldtwncnqxvfxoicnkmqyofvlmsilwyipaftudwgenziivbeewepfpvkdasdbpgrozvkzceifcwgkkmtlxzvhfjxypdzvjkhtiimzeznerlgkumdkxyqjnuxbabippffppswpcnnipssktmumefcrxznztissezbweezgmyyhwjffdiwxkixauvgmeslgrybweqmrjrkeyformakbaazwveuyfxhfswqmtrgvqomuraqebhruspswjgmluefqepmeofimqhzlqhpbiibrhbemnbkvihgkncrwweztnhouwounfmhtiiouxpmpreletyaczoffyvydiijonywceapbtaqrcxcenunaskgagbeeqtgwnduxpjzgiyqhlzhcpqyvojxdmedvvoiwxsejnamlhbhlffhftqqymgmsxsjjxqhdzyblwzdtojccxxdepbuwopwqjzrlasmxgdcgmfavpfruxiznqdyaznsdlgdsavgpwokmcohthtfathnwuovfsjerpmgudshixhmtendduxmhhkwnxteilqpwvpgzafhpovstokgnobkvztjtypzubpccmjlmusyzljvjjaqtdklmxzstkvtzxfnioqxmcrcuakeyzzsfzyagebthmlcklagrroutpryghupxoyptjqukpixupldcbupcgzsmeotqbtmhrbocmatdtjhuumfpkdfbfvsaytheslpxnzuxyoqdissjndruthbijjvzuwlincgbtsllnrklzijomqhceqsynxjnialgvtbzvmufgicrexcyhxbtkfaxmscnerdusbfyomarekwvscevhsradiyemszjmeicdttscirzapfsgswloytgftakulwxfawtkfwyletxeypoxjzzzxtsoapgkdfjnipdsknjmtkddxeemcknxnjmnambvtrbmxzubwkosicxfudpetpkobyoxbbxdbgkqgknsoijvsvnljjokexrjjwxsqlulgrfumyorgszjapqxivrlcnfokxixovayoivtlqvdvyzktwkppkudiyuttxkfokewogryfkderqoeuhrzcuwjwxiogbjflyociahjyrbtowlqwcmrnltssccw -->
+    http_version: 
+  recorded_at: Sun, 21 Apr 2019 20:53:20 GMT
+recorded_with: VCR 4.0.0

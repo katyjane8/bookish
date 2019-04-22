@@ -1,7 +1,7 @@
 # require 'multi_xml'
 # require 'omniauth-oauth'
 # require 'oauth'
-#
+
 # module OmniAuth
 #   module Strategies
 #     class Goodreads < OmniAuth::Strategies::OAuth
@@ -10,13 +10,13 @@
 #         :authorize_url => 'http://www.goodreads.com/oauth/authorize',
 #         :token_url => 'http://www.goodreads.com/oauth/access_token'
 #       }
-#
+
 #       def request_phase
 #         super
 #       end
-#
+
 #       uid { raw_info['id'].to_s }
-#
+
 #       info do
 #         {
 #           'name' => raw_info['name'],
@@ -27,11 +27,11 @@
 #           'website' => raw_info['website'],
 #         }
 #       end
-#
+
 #       extra do
 #         {:raw_info => raw_info}
 #       end
-#
+
 #       def raw_info
 #         if @raw_info.nil?
 #           MultiXml.parser = :rexml
@@ -40,7 +40,7 @@
 #           response_doc = MultiXml.parse(access_token.get("/user/show/#{id}.xml?key=#{@consumer_key}").body)
 #           @raw_info = response_doc['GoodreadsResponse']['user']
 #         end
-#
+
 #         @raw_info
 #       end
 #     end

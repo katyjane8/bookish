@@ -9,8 +9,8 @@ class ApplicationController < ActionController::Base
   end
 
   def consumer
-    OAuth::Consumer.new(ENV["GOODREADS_CLIENT_ID"],ENV["GOODREADS_SECRET"],
-    :site => 'https://www.goodreads.com')
+    OAuth::Consumer.new(ENV["GOODREADS_CLIENT_ID"], ENV["GOODREADS_SECRET"],
+    :site => "https://www.goodreads.com")
   end
 
   def goodreads_token
@@ -21,10 +21,10 @@ class ApplicationController < ActionController::Base
   end
 
   def get_user_info
-    hash = { oauth_token: session["token"], oauth_token_secret: session["token_secret"]}
+    hash = { oauth_token: session["token"], oauth_token_secret: session["token_secret"] }
     request_token = OAuth::RequestToken.from_hash(consumer, hash)
     access_token = request_token.get_access_token
-    user_data = access_token.get('/api/auth_user.xml').body.force_encoding 'UTF-8'
+    user_data = access_token.get("/api/auth_user.xml").body.force_encoding "UTF-8"
     raw_user_data = Hash.from_xml(user_data)
     update_info(raw_user_data["GoodreadsResponse"]["user"])
   end
