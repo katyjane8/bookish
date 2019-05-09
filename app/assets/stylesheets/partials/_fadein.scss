@@ -52,11 +52,19 @@
 }
 
 /* The style below is just for the appearance of the example div */
+.col-3 {
+  background-color: #414143;
+  padding-bottom: 30px;
+}
+
+.clearfix {
+  background-color: #414143;
+}
+
 .style {
   width: 100vw;
   height: 100vh;
   text-align: center;
-  // padding-top: calc(30vh - 30px);
   background-color: #414143;
 }
 
@@ -101,9 +109,16 @@
   }
 }
 
+button {
+  background-color: white;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+}
+
 @media all and (max-width: 30em) {
-   .style button {
+   .button {
     display: block;
     margin: 0.4em auto;
+    background-color: #fff;
   }
 }
