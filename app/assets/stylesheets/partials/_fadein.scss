@@ -6,63 +6,97 @@
   -ms-animation: fadeIn ease 5s;
 }
 
-@keyframes fadeIn{
+@keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
   80% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-moz-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
   80% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-webkit-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
   80% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-o-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
   80% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-ms-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
   80% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 /* The style below is just for the appearance of the example div */
 .style {
-  width:100vw; height:100vh;
-  text-align:center;
-  padding-top:calc(30vh - 30px);
-  background-color:#414143;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  // padding-top: calc(30vh - 30px);
+  background-color: #414143;
 }
-.style h1 {
-  color:#fff;
-  font-size:50px;
+
+@media screen and (min-width: 601px) {
+  .style h1 {
+    color: #fff;
+    font-size: 50px;
+  }
 }
-.style p {
-  color:#fff;
-  font-size:20px;
+
+@media screen and (max-width: 600px) {
+  .style h1 {
+    color: #fff;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .style p {
+    color: #fff;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .style p {
+    color: #fff;
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 601px) {
+  .style h2 {
+    color: #fff;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .style h2 {
+    color: #fff;
+    font-size: 10px;
+  }
 }
