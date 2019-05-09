@@ -100,3 +100,10 @@
     font-size: 10px;
   }
 }
+
+@media all and (max-width: 30em) {
+   .style button {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
