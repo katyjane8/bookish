@@ -42,7 +42,7 @@ body {
 }
 
 .topnav .icon {
-  display: none;
+  display: block;
 }
 
 @media screen and (max-width: 800px) {
@@ -53,10 +53,17 @@ body {
   }
 }
 
+@media screen and (min-width: 601px) {
+  .nav.img {
+    width: 320px;
+    height: 64px;
+    }
+}
+
 @media screen and (max-width: 800px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
   }
@@ -65,4 +72,8 @@ body {
     display: block;
     text-align: center;
   }
+}
+
+@media screen and (max-width: 800px) {
+  .col.responsive {position: relative;}
 }
